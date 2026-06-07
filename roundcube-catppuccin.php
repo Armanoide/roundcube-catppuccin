@@ -20,7 +20,7 @@ class roundcube_catppuccin extends rcube_plugin
             $flavor = $rcmail->config->get('catppuccin_flavor', 'mocha');
 
             // Dynamically include the correct stylesheet from the plugin folder
-            $this->include_stylesheet("catppuccin-{$flavor}/styles.css");
+            $this->include_stylesheet("src/{$flavor}/styles.css");
         }
     }
 }
