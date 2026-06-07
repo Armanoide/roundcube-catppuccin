@@ -14,6 +14,8 @@ class roundcube_catppuccin extends rcube_plugin
     {
         $rcmail = rcmail::get_instance();
 
+        rcube::write_log('catppuccin', 'Skin actuel: ' . $rcmail->config->get('skin'));
+
         // We only target the official Elastic skin
         if ($rcmail->config->get('skin') === 'elastic') {
             // Read the preferred flavor from config, default to mocha
