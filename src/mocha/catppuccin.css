@@ -295,7 +295,6 @@ html.dark-mode #taskmenu a:hover:not(.selected) {
 html.dark-mode #taskmenu a.selected {
     background-color: #313244 !important;
     color: #cba6f7 !important;
-    border-left: 4px solid #cba6f7 !important;
 }
 
 /* Bottom special buttons section (Theme toggle, About, Logout) */
@@ -310,6 +309,11 @@ html.dark-mode #layout-menu .special-buttons a {
 }
 
 html.dark-mode #layout-menu .special-buttons a:hover {
+    background-color: #313244 !important;
+    color: #f38ba8 !important; /* Catppuccin Red for explicit visual feedback */
+}
+
+html.dark-mode #layout-menu .special-buttons .logout a:hover {
     background-color: #313244 !important;
     color: #f38ba8 !important; /* Catppuccin Red for explicit visual feedback */
 }
