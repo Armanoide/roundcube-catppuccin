@@ -1,0 +1,22 @@
+{
+  "name": "armanoide/roundcube-catppuccin",
+  "type": "roundcube-plugin",
+  "description": "Catppuccin flavors (Mocha, Macchiato, Frappe, Latte) for Roundcube Elastic skin",
+  "keywords": [
+    "roundcube",
+    "skin",
+    "theme",
+    "catppuccin",
+    "dark-mode"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Armanoide",
+      "homepage": "https://github.com/Armanoide"
+    }
+  ],
+  "require": {
+    "roundcube/plugin-installer": ">=0.3.0"
+  }
+}
