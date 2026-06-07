@@ -1,0 +1,517 @@
+:root {
+    --primary: #cba6f7 !important;
+    --color-primary: #cba6f7 !important;
+    --color-primary-hover: #7f849c !important;
+    --color-primary-dark: #313244 !important;
+    --color-link: #89b4fa !important;
+    --color-link-hover: #b4befe !important;
+    --darkreader-background-cba6f7: #cba6f7 !important;
+    --darkreader-text-1e1e2e: #1e1e2e !important;
+    --darkreader-text-11111b: #11111b !important;
+    --darkreader-text-cdd6f4: #cdd6f4 !important;
+}
+
+body, #layout, .app-navigation, .files-navigation {
+    background-color: #1e1e2e !important;
+    color: #cdd6f4 !important;
+}
+
+#layout-sidebar, #layout-sidebar .header, .taskmenu {
+    background-color: #11111b !important;
+}
+
+.taskmenu .action.button, .button.main, .btn-primary {
+    background-color: #cba6f7 !important;
+    color: #1e1e2e !important;
+}
+
+.listitem.selected, .listrecord.selected {
+    background-color: #313244 !important;
+    border-left: 4px solid #cba6f7 !important;
+}
+
+body::-webkit-scrollbar { background-color: #11111b !important; }
+body::-webkit-scrollbar-thumb { background-color: #45475a !important; }
+
+html.dark-mode .listing li.selected,
+html.dark-mode .listing li.selected *,
+html.dark-mode .listing tr.selected td,
+html.dark-mode .listing tr.selected td * {
+    background-color: #cba6f7 !important;
+}
+
+html.dark-mode .listing li.selected *,
+html.dark-mode .listing tr.selected td * {
+    color: #1e1e2e !important;
+}
+
+html.dark-mode .listing .selected .unreadcount {
+    background-color: #1e1e2e !important; 
+    color: #cba6f7 !important;
+}
+
+html.dark-mode .listing .unreadcount {
+    background-color: #cba6f7 !important; 
+    color: #1e1e2e !important;
+}
+
+html.dark-mode .alert.alert-warning,
+html.dark-mode .boxwarning,
+html.dark-mode .alert.alert-warning i.icon:before {
+    background-color: transparent !important;
+    color: #f3cf58 !important;
+    border: none !important;
+}
+
+html.dark-mode a.btn.btn-primary {
+    color: #1e1e2e !important;
+    border-color: transparent;
+    background: none;
+}
+
+html.dark-mode .alert.alert-warning *,
+html.dark-mode .boxwarning * {
+    color: #f3cf58 !important;
+}
+
+html:not(.touch) .listing li>a:focus, 
+html:not(.touch) .listing.focus tbody tr.focused>td:first-child, 
+html:not(.touch) .listing.focus:not(.withselection) tbody tr.focused>td.selection+td {
+    border-left: 5px solid #1e1e2e;
+}
+
+a.rcmContactAddress, .header-links a, a.extwin.hidden-small {
+    color: #cba6f7 !important;
+}
+
+html.dark-mode #taskmenu .action-buttons a {
+    color: #cba6f7 !important;
+}
+
+html.dark-mode #taskmenu a.selected,
+html.dark-mode .menu.toolbar a.selected {
+    background-color: #cba6f7 !important;
+    color: #1e1e2e !important;
+}
+
+html.dark-mode #layout-menu .special-buttons a:not(:focus) {
+    background-color: transparent !important;
+}
+
+html.dark-mode .alert.alert-danger,
+html.dark-mode .alert.alert-error,
+html.dark-mode .boxerror,
+html.dark-mode .boxdanger {
+    background-color: #f38ba8 !important; 
+    color: #11111b !important;            
+    border: 1px solid #e78284 !important; 
+}
+
+html.dark-mode .alert.alert-danger *,
+html.dark-mode .alert.alert-error *,
+html.dark-mode .alert.alert-danger i.icon:before {
+    color: #11111b !important;
+}
+
+
+/* Styling for the mail composition form and headers wrapper */
+html.dark-mode .formcontent.scroller,
+html.dark-mode #compose-headers,
+html.dark-mode .compose-headers {
+    background-color: #1e1e2e !important;
+    color: #cdd6f4 !important;
+}
+
+/* Labels style (From, To, Subject, etc.) */
+html.dark-mode .compose-headers .col-form-label {
+    color: #cba6f7 !important;
+    font-weight: bold;
+}
+
+/* Global inputs, textareas, selects and recipient lists */
+html.dark-mode .form-control,
+html.dark-mode .custom-select,
+html.dark-mode .recipient-input,
+html.dark-mode .recipient-input input {
+    background-color: #11111b !important;
+    color: #cdd6f4 !important;
+    border: 1px solid #313244 !important;
+}
+
+/* Focus state for form inputs to match primary color */
+html.dark-mode .form-control:focus,
+html.dark-mode .custom-select:focus,
+html.dark-mode .recipient-input.focus,
+html.dark-mode .recipient-input input:focus {
+    border-color: #cba6f7 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.2) !important;
+}
+
+/* Action buttons inside the input groups (Add contact, Edit identities, etc.) */
+html.dark-mode .input-group-append .input-group-text {
+    background-color: #313244 !important;
+    color: #cba6f7 !important;
+    border: 1px solid #45475a !important;
+}
+
+/* Hover state for input group append actions */
+html.dark-mode .input-group-append .input-group-text:hover {
+    background-color: #7f849c !important;
+    color: #1e1e2e !important;
+}
+
+/* Main message text area container and toolbar */
+html.dark-mode #composebodycontainer,
+html.dark-mode #composebody {
+    background-color: #1e1e2e !important;
+    color: #cdd6f4 !important;
+}
+
+html.dark-mode .editor-toolbar {
+    background-color: #11111b !important;
+    border-top: 1px solid #313244 !important;
+}
+
+/* Options dropdown inside custom native select elements */
+html.dark-mode .custom-select option {
+    background-color: #11111b !important;
+    color: #cdd6f4 !important;
+}
+
+/* Login table and row wrappers */
+html.dark-mode .form-group.row td.input-group {
+    background-color: transparent !important;
+}
+
+/* Icon containers on the left of the inputs */
+html.dark-mode .input-group-prepend .input-group-text {
+    background-color: #313244 !important;
+    color: #cba6f7 !important;
+    border: 1px solid #45475a !important;
+    border-right: none !important; /* Smooth transition to the input field */
+}
+
+/* Username and Password input fields */
+html.dark-mode .input-group-lg .form-control {
+    background-color: #11111b !important;
+    color: #cdd6f4 !important;
+    border: 1px solid #45475a !important;
+}
+
+/* Placeholder text color (Username / Password hints) */
+html.dark-mode .input-group-lg .form-control::placeholder {
+    color: #7f849c !important;
+    opacity: 1;
+}
+
+/* Interactive states when clicking/focusing the login fields */
+html.dark-mode .input-group-lg .form-control:focus {
+    border-color: #cba6f7 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.2) !important;
+}
+
+/* Optional: Ensures the icon container changes look when input is focused if supported */
+html.dark-mode .input-group-lg .form-control:focus ~ .input-group-prepend .input-group-text {
+    border-color: #cba6f7 !important;
+}
+
+/* Container for the login button */
+html.dark-mode .formbuttons {
+    background-color: transparent !important;
+    padding-top: 10px;
+}
+
+/* Main Login button styling */
+html.dark-mode #rcmloginsubmit.btn-primary {
+    background-color: #cba6f7 !important;
+    color: #1e1e2e !important;
+    border: 1px solid #cba6f7 !important;
+    font-weight: bold !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+/* Hover and active states for the Login button */
+html.dark-mode #rcmloginsubmit.btn-primary:hover,
+html.dark-mode #rcmloginsubmit.btn-primary:focus {
+    background-color: #7f849c !important;
+    border-color: #7f849c !important;
+    color: #1e1e2e !important;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.3) !important;
+    outline: none !important;
+}
+
+/* Main side layout menu container */
+html.dark-mode #layout-menu {
+    background-color: #11111b !important;
+    border-right: 1px solid #313244 !important;
+}
+
+/* Header section containing the logo and cancel button */
+html.dark-mode #layout-menu .popover-header {
+    background-color: #11111b !important;
+    border-bottom: 1px solid #313244 !important;
+}
+
+/* Optional: Invert logo colors if it's too dark or light for the theme */
+html.dark-mode #layout-menu #logo {
+    filter: brightness(0.9) contrast(1.1);
+}
+
+/* Floating / Main action button section (Compose button wrapper) */
+html.dark-mode #layout-menu .action-buttons {
+    background-color: transparent !important;
+}
+
+/* 'Compose' button specific styling */
+html.dark-mode #layout-menu a.compose {
+    background-color: #cba6f7 !important;
+    color: #1e1e2e !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+
+html.dark-mode #layout-menu a.compose:hover {
+    background-color: #7f849c !important;
+    color: #1e1e2e !important;
+}
+
+/* Navigation items links (Mail, Contacts, Settings) */
+html.dark-mode #taskmenu a {
+    color: #cdd6f4 !important;
+    background-color: transparent !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+
+/* Hover state for non-selected navigation links */
+html.dark-mode #taskmenu a:hover:not(.selected) {
+    background-color: #313244 !important;
+    color: #cba6f7 !important;
+}
+
+/* Currently selected navigation link (e.g., active Mail tab) */
+html.dark-mode #taskmenu a.selected {
+    background-color: #313244 !important;
+    color: #cba6f7 !important;
+    border-left: 4px solid #cba6f7 !important;
+}
+
+/* Bottom special buttons section (Theme toggle, About, Logout) */
+html.dark-mode #layout-menu .special-buttons {
+    background-color: transparent !important;
+    border-top: 1px solid #313244 !important;
+}
+
+/* Explicit color fix for the logout and secondary actions */
+html.dark-mode #layout-menu .special-buttons a {
+    color: #a6adc8 !important;
+}
+
+html.dark-mode #layout-menu .special-buttons a:hover {
+    background-color: #313244 !important;
+    color: #f38ba8 !important; /* Catppuccin Red for explicit visual feedback */
+}
+
+/* Modern scrollbar styling for Firefox */
+html.dark-mode *, 
+html.dark-mode {
+    scrollbar-width: thin !important;
+    scrollbar-color: #45475a #11111b !important; /* thumb background */
+}
+
+/* Scrollbar styling for Webkit engines (Chrome, Edge, Safari, Opera) */
+html.dark-mode ::-webkit-scrollbar,
+html.dark-mode *::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #11111b !important;
+}
+
+/* Scrollbar track (the background part) */
+html.dark-mode ::-webkit-scrollbar-track,
+html.dark-mode *::-webkit-scrollbar-track {
+    background-color: #11111b !important;
+}
+
+/* Scrollbar thumb (the draggable bar) */
+html.dark-mode ::-webkit-scrollbar-thumb,
+html.dark-mode *::-webkit-scrollbar-thumb {
+    background-color: #45475a !important;
+    border-radius: 4px !important;
+    border: 1px solid #11111b !important;
+}
+
+/* Scrollbar thumb hover state */
+html.dark-mode ::-webkit-scrollbar-thumb:hover,
+html.dark-mode *::-webkit-scrollbar-thumb:hover {
+    background-color: #7f849c !important;
+}
+
+/* Context menu background */
+html.dark-mode ul.menu.listing {
+    background-color: #11111b !important;
+    border-color: #313244 !important;
+}
+
+/* Default link text color */
+html.dark-mode ul.menu.listing li a {
+    color: #cdd6f4 !important;
+    background-color: transparent !important;
+}
+
+/* Hover state styling */
+html.dark-mode ul.menu.listing li a:hover,
+html.dark-mode ul.menu.listing li a:focus {
+    background-color: #313244 !important;
+    color: #cba6f7 !important;
+}
+
+/* Main header container styling */
+html.dark-mode .header[role="toolbar"] {
+    background-color: #11111b !important;
+    border-bottom: 1px solid #313244 !important;
+    color: #cdd6f4 !important;
+}
+
+/* Header title text (e.g., "Mail") */
+html.dark-mode .header .header-title {
+    color: #cdd6f4 !important;
+}
+
+/* Toolbar menu background */
+html.dark-mode ul.menu.toolbar {
+    background-color: transparent !important;
+}
+
+/* Toolbar action links and buttons (Reply, Forward, Delete, Mark...) */
+html.dark-mode ul.menu.toolbar li a,
+html.dark-mode .header .button.icon {
+    color: #cdd6f4 !important;
+    background-color: transparent !important;
+}
+
+/* Hover effect on toolbar icons/buttons */
+html.dark-mode ul.menu.toolbar li a:hover,
+html.dark-mode .header .button.icon:hover {
+    color: #cba6f7 !important;
+    background-color: #313244 !important;
+}
+
+/* Specific styling for dropdown arrows inside combined buttons (like Reply All options) */
+html.dark-mode ul.menu.toolbar .dropbutton a.dropdown {
+}
+
+/* Disabled actions styling inside the toolbar */
+html.dark-mode ul.menu.toolbar li a.disabled,
+html.dark-mode ul.menu.toolbar li a[aria-disabled="true"] {
+    color: #585b70 !important;
+    background-color: transparent !important;
+    cursor: not-allowed !important;
+}
+
+/* Main dialog wrapper container */
+html.dark-mode .ui-dialog.ui-widget-content {
+    background-color: #11111b !important;
+    border: 1px solid #313244 !important;
+    color: #cdd6f4 !important;
+}
+
+/* Dialog content area (inside the box) */
+html.dark-mode .ui-dialog-content.ui-widget-content {
+    background-color: transparent !important;
+    color: #cdd6f4 !important;
+}
+
+/* Titlebar layout decoration */
+html.dark-mode .ui-dialog-titlebar {
+    background-color: #1e1e2e !important;
+    border-bottom: 1px solid #313244 !important;
+    color: #cba6f7 !important;
+}
+
+/* Close icon button in the top right corner */
+html.dark-mode .ui-dialog-titlebar-close {
+    background-color: transparent !important;
+    border: none !important;
+    color: #a6adc8 !important;
+}
+
+html.dark-mode .ui-dialog-titlebar-close:hover {
+    color: #f38ba8 !important; /* Catppuccin Red hint on hover */
+}
+
+/* Labels inside the forms group */
+html.dark-mode .ui-dialog label.col-form-label {
+    color: #cba6f7 !important;
+}
+
+/* Bottom action buttons container area */
+html.dark-mode .ui-dialog-buttonpane {
+    background-color: #1e1e2e !important;
+    border-top: 1px solid #313244 !important;
+}
+
+/* Primary 'Save' button styling inside the dialogue */
+html.dark-mode .ui-dialog-buttonset button.btn-primary.mainaction {
+    background-color: #cba6f7 !important;
+    color: #1e1e2e !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+
+html.dark-mode .ui-dialog-buttonset button.btn-primary.mainaction:hover {
+    background-color: #7f849c !important;
+}
+
+/* Secondary 'Cancel' button styling inside the dialogue */
+html.dark-mode .ui-dialog-buttonset button.btn-secondary.cancel {
+    background-color: #313244 !important;
+    color: #cdd6f4 !important;
+    border: 1px solid #45475a !important;
+}
+
+html.dark-mode .ui-dialog-buttonset button.btn-secondary.cancel:hover {
+    background-color: #45475a !important;
+    color: #cba6f7 !important;
+}
+
+/* Message list header container */
+html.dark-mode #messagelist-header.header {
+    background-color: #11111b !important;
+    border-bottom: 1px solid #313244 !important;
+    color: #cdd6f4 !important;
+}
+
+/* Folder title text (e.g., "Spams", "Inbox") */
+html.dark-mode #messagelist-header .header-title {
+    color: #cdd6f4 !important;
+    font-weight: bold !important;
+}
+
+/* Header buttons and toolbar links (Menu, Folders, Refresh, Select...) */
+html.dark-mode #messagelist-header .button.icon,
+html.dark-mode #toolbar-list-menu li a {
+    color: #cdd6f4 !important;
+    background-color: transparent !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+
+/* Hover state for buttons and toolbar links */
+html.dark-mode #messagelist-header .button.icon:hover,
+html.dark-mode #toolbar-list-menu li a:hover,
+html.dark-mode #messagelist-header .button.icon.active,
+html.dark-mode #toolbar-list-menu li a.active:hover {
+    background-color: #313244 !important;
+    color: #cba6f7 !important;
+}
+
+/* Disabled toolbar links state (e.g., inactive Threads) */
+html.dark-mode #toolbar-list-menu li a.disabled,
+html.dark-mode #toolbar-list-menu li a[aria-disabled="true"] {
+    color: #585b70 !important;
+    background-color: transparent !important;
+    cursor: not-allowed !important;
+}
+
