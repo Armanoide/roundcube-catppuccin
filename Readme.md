@@ -32,19 +32,23 @@ Catppuccin theme overlay for Roundcube's Elastic skin. Transforms the default in
 ```bash
 cd /path/to/roundcube
 composer require armanoide/roundcube-catppuccin
-Manual Installation
+```
+
+### Manual Installation
 1. Clone this repository into your plugins/ directory
 2. Enable the plugin in config/config.inc.php
-Configuration
+
+### Configuration
 Enable the plugin and set your preferred flavor in your Roundcube config.inc.php:
+```php
 $config['plugins'] = ['roundcube_catppuccin'];
 $config['catppuccin_flavor'] = 'mocha';
-Available Options
-Setting
-catppuccin_flavor
-Docker Setup
+```
+
+
 If you're running Roundcube via the official roundcube/roundcubemail Docker image:
-docker-compose.yml
+`docker-compose.yml`
+```yaml
 services:
   roundcubemail:
     image: roundcube/roundcubemail:latest
@@ -54,7 +58,10 @@ services:
     volumes:
       - ./www/config:/var/www/html/config
       - ./www/plugins:/var/www/html/plugins
+```
+
 Mount your plugins directory to persist the installed plugin across container restarts.
+```php
 Roundcube config.inc.php
 <?php
 $config['plugins'] = [
@@ -63,3 +70,5 @@ $config['plugins'] = [
     'roundcube_catppuccin',
 ];
 $config['catppuccin_flavor'] = 'mocha';
+```
+
