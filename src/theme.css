@@ -263,7 +263,6 @@ html.dark-mode #layout-menu .action-buttons {
 }
 
 html.dark-mode #layout-menu a.compose {
-    background-color: var(--ctp-lavender) !important;
     color: var(--ctp-base) !important;
     border: none !important;
     font-weight: bold !important;
@@ -533,4 +532,1015 @@ html.dark-mode .custom-switch .custom-control-input:checked~.custom-control-labe
 
 .ui.alert.loading>i.icon:before {
     color: var(--ctp-lavender) !important;
+}
+
+/* ── Search bar ──────────────────────────────────────────────────── */
+html.dark-mode .searchbar {
+    background-color: transparent !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .searchbar form:before,
+html.dark-mode .searchbar input {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .searchbar a {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .searchbar a.selected {
+    color: var(--ctp-lavender) !important;
+}
+
+/* ── Pagination ──────────────────────────────────────────────────── */
+html.dark-mode .menu.pagenav .pagenav-text,
+html.dark-mode .menu.pagenav a {
+    color: var(--ctp-text) !important;
+}
+
+/* ── Plugin info message ───────────────────────────────────── */
+html.dark-mode .ui.alert .pluginmessage {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+html.dark-mode .ui.alert .pluginmessage a {
+    color: var(--ctp-lavender) !important;
+}
+
+/* ── Task menu action buttons ────────────────────────────────── */
+html.dark-mode #taskmenu .action-buttons a,
+html.dark-mode #taskmenu .action-buttons a:hover,
+html.dark-mode #taskmenu .action-buttons a.selected {
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode #taskmenu a.selected,
+html.dark-mode #taskmenu a:hover {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* ── Toolbar selected state ─────────────────────────────────────── */
+html.dark-mode .menu.toolbar a.selected {
+    color: var(--ctp-lavender) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* ── Listing details ──────────────────────────────────────────── */
+html.dark-mode .listing li.selected ul {
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .listing li.selected ul div.treetoggle {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .listing li.droptarget > a,
+html.dark-mode .listing tr.droptarget > td {
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .listing-info {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .listing span.secondary,
+html.dark-mode .contactlist span.email {
+    color: var(--ctp-subtext0) !important;
+}
+
+/* ── Message list details ───────────────────────────────────── */
+html.dark-mode .messagelist {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .messagelist td.subject span.size,
+html.dark-mode .messagelist td.subject span.date,
+html.dark-mode .messagelist td.subject span.fromto {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .messagelist td.subject span.msgicon.status {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .messagelist td.subject span.msgicon.status.unread,
+html.dark-mode .messagelist td.subject span.msgicon.status.replied,
+html.dark-mode .messagelist td.subject span.msgicon.status.forwarded {
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .messagelist tr.flagged td,
+html.dark-mode .messagelist tr.flagged span.size,
+html.dark-mode .messagelist tr.flagged td.subject span.subject a,
+html.dark-mode .messagelist tr.flagged td.subject span.date,
+html.dark-mode .messagelist tr.flagged td.subject span.fromto,
+html.dark-mode .messagelist tr.flagged span.attachment span {
+    color: var(--ctp-yellow) !important;
+}
+
+html.dark-mode .messagelist tr.deleted td,
+html.dark-mode .messagelist tr.deleted td.subject span.subject a,
+html.dark-mode .messagelist tr.deleted td.subject span.date,
+html.dark-mode .messagelist tr.deleted td.subject span.fromto,
+html.dark-mode .messagelist tr.deleted td span.flag,
+html.dark-mode .messagelist tr.deleted td span.attachment span,
+html.dark-mode .messagelist tr.deleted td.subject span.msgicon.status {
+    color: var(--ctp-surface2) !important;
+}
+
+html.dark-mode .messagelist span.attachment span {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .messagelist tr.selected td.subject a,
+html.dark-mode .messagelist tr.selected td.subject span.fromto,
+html.dark-mode .messagelist tr.selected td.subject span.msgicon.status {
+    color: var(--ctp-base) !important;
+}
+
+/* ── Folders list unread badge ──────────────────────────────── */
+html.dark-mode .folderlist li.mailbox .unreadcount {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+    font-weight: bold !important;
+}
+
+/* ── Attachments list ─────────────────────────────────────── */
+html.dark-mode .attachmentslist {
+    background-color: var(--ctp-surface0) !important;
+    border: 1px solid var(--ctp-surface1) !important;
+}
+
+html.dark-mode .attachmentslist a {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .attachmentslist li .attachment-name {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .attachmentslist li .attachment-size {
+    color: var(--ctp-subtext0) !important;
+}
+
+/* ── Floating action buttons (mobile) ───────────────────────── */
+html.dark-mode .floating-action-buttons a.button {
+    box-shadow: 0 0 5px 5px var(--ctp-surface1) !important;
+    background: var(--ctp-lavender) !important;
+}
+
+/* ── Form hints & placeholders ────────────────────────────────── */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--ctp-base) inset !important;
+    -webkit-text-fill-color: var(--ctp-text) !important;
+}
+
+html.dark-mode ::placeholder,
+html.dark-mode .listing-info,
+html.dark-mode .listing span.secondary,
+html.dark-mode .file-upload .hint,
+html.dark-mode .contactlist span.email,
+html.dark-mode #login-footer > div,
+html.dark-mode #contacthead.readonly .source.row,
+html.dark-mode .formcontent .hint,
+html.dark-mode .propform .form-text {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode #login-footer {
+    color: var(--ctp-subtext0) !important;
+    background-color: transparent !important;
+}
+
+html.dark-mode #login-footer > div {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* ── File upload area ───────────────────────────────────────── */
+html.dark-mode .file-upload {
+    border-color: var(--ctp-surface1) !important;
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .file-upload.droptarget.active,
+html.dark-mode .file-upload.droptarget.hover {
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .file-upload.droptarget.hover {
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .file-upload .attachmentslist {
+    background: transparent !important;
+}
+
+/* ── Image upload widget ────────────────────────────────────── */
+html.dark-mode .image-upload {
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .image-upload a.button {
+    background-color: var(--ctp-surface1) !important;
+}
+
+/* ── Custom switch unchecked state ──────────────────────────── */
+html.dark-mode .custom-switch .custom-control-label::before {
+    background-color: var(--ctp-surface1) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .custom-switch .custom-control-label::after {
+    background-color: var(--ctp-text) !important;
+}
+
+/* ── Tab navigation ──────────────────────────────────────────── */
+html.dark-mode .nav-tabs {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .nav-tabs .nav-link {
+    color: var(--ctp-text) !important;
+    border-color: transparent;
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .nav-tabs .nav-link:hover {
+    background: var(--ctp-surface0) !important;
+    border-color: var(--ctp-surface1) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .nav-tabs .nav-link.active {
+    background: var(--ctp-base) !important;
+    border-color: var(--ctp-surface0) !important;
+    border-bottom-color: transparent !important;
+    color: var(--ctp-lavender) !important;
+}
+
+/* ── Tables ───────────────────────────────────────────────────── */
+html.dark-mode .table {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .table td,
+html.dark-mode .table th,
+html.dark-mode .table thead th {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .table tr.deleted td {
+    color: var(--ctp-surface2) !important;
+}
+
+html.dark-mode .table tr.selected td {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* ── Table widget ────────────────────────────────────────────── */
+html.dark-mode .table-widget {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .table-widget > .footer {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .table-widget table.options-table tr.selected td {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* ── Select menu / popover dropdowns ────────────────────────── */
+html.dark-mode .select-menu {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .select-menu .listing li {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+/* ── Popover directional arrows ────────────────────────────── */
+html.dark-mode .bs-popover-auto[x-placement^="right"] > .arrow::after,
+html.dark-mode .bs-popover-right > .arrow::after {
+    border-right-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .bs-popover-auto[x-placement^="left"] > .arrow::after,
+html.dark-mode .bs-popover-left > .arrow::after {
+    border-left-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .bs-popover-auto[x-placement^="top"] > .arrow::after,
+html.dark-mode .bs-popover-top > .arrow::after {
+    border-top-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .bs-popover-auto[x-placement^="bottom"] > .arrow::after,
+html.dark-mode .bs-popover-bottom > .arrow::after {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+/* ── Listing hover menu ────────────────────────────────────── */
+html.dark-mode .listing-hover-menu {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark-mode .listing-hover-menu a.button {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .listing-hover-menu a.button:hover {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .listing-hover-menu span.txt {
+    color: var(--ctp-subtext0) !important;
+}
+
+/* ── Drag layer ────────────────────────────────────────────── */
+html.dark-mode #rcmdraglayer {
+    background-color: var(--ctp-mantle) !important;
+    border: 1px solid var(--ctp-surface0) !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* ── Quota widget ───────────────────────────────────────────── */
+html.dark-mode .quota-widget {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .quota-widget .bar {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .quota-widget .value {
+    background-color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .quota-widget .value.warning {
+    background-color: var(--ctp-red) !important;
+}
+
+html.dark-mode .quota-info .root {
+    color: var(--ctp-subtext0) !important;
+    background-color: transparent !important;
+}
+
+/* ── Mail preview ───────────────────────────────────────────── */
+html.dark-mode #message-header .header-headers .header-title {
+    color: var(--ctp-text) !important;
+    font-weight: bold !important;
+}
+
+html.dark-mode .message-partheaders {
+    background-color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .message-partheaders table.headers-table {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .message-partheaders table.headers-table .header-title {
+    font-weight: bold !important;
+}
+
+html.dark-mode .message-part {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .message-part blockquote {
+    background-color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-blue) !important;
+    color: var(--ctp-blue) !important;
+}
+
+html.dark-mode .message-part blockquote blockquote {
+    border-color: var(--ctp-green) !important;
+    color: var(--ctp-green) !important;
+}
+
+html.dark-mode .message-part blockquote blockquote blockquote {
+    border-color: var(--ctp-red) !important;
+    color: var(--ctp-red) !important;
+}
+
+html.dark-mode .message-part blockquote span.blockquote-link {
+    color: var(--ctp-text) !important;
+    background: var(--ctp-base) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .message-part span.sig {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .message-htmlpart {
+    background-color: white !important;
+    color: #161b1d !important;
+}
+
+/* Image attachment inline */
+html.dark-mode p.image-attachment {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode p.image-attachment span {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode fieldset.image-attachment legend {
+    color: var(--ctp-subtext0) !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+/* ── Contact photos ──────────────────────────────────────── */
+html.dark-mode img.contactphoto,
+html.dark-mode #contactpic {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* Message header contact photo */
+html.dark-mode #message-header .header img.contactphoto {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* ── IFrame loader ───────────────────────────────────────────── */
+html.dark-mode .iframe-loader {
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .iframe-loader .spinner-border {
+    color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+/* ── Skin selection thumbnails ────────────────────────────── */
+html.dark-mode .skinselection .skinthumbnail {
+    border-color: var(--ctp-surface1) !important;
+    background: var(--ctp-surface0) !important;
+}
+
+/* ── PGP key import dialog ────────────────────────────────── */
+html.dark-mode .pgpkeyimport div.key.revoked,
+html.dark-mode .pgpkeyimport div.key.disabled {
+    color: var(--ctp-surface2) !important;
+}
+
+html.dark-mode .pgpkeyimport li.uid::before {
+    opacity: 1 !important;
+}
+
+/* ── jQuery UI widgets ─────────────────────────────────────── */
+html.dark-mode .ui-widget {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .ui-widget-overlay {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+html.dark-mode .ui-widget-header,
+html.dark-mode .ui-widget-content {
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-titlebar {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-title,
+html.dark-mode .ui-dialog .ui-dialog-titlebar-close {
+    color: var(--ctp-text) !important;
+    background: transparent !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-buttonpane {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-buttonpane a.btn-link {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-buttonpane a.btn-link:focus {
+    background: var(--ctp-surface0) !important;
+}
+
+/* Datepicker */
+html.dark-mode .ui-datepicker .ui-datepicker-header {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-mantle) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .ui-datepicker th {
+    font-weight: normal !important;
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .ui-datepicker .ui-datepicker-prev,
+html.dark-mode .ui-datepicker .ui-datepicker-next,
+html.dark-mode .ui-datepicker .ui-state-default,
+html.dark-mode .ui-datepicker.ui-widget-content .ui-state-default {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .ui-datepicker .ui-state-highlight,
+html.dark-mode .ui-datepicker.ui-widget-content .ui-state-highlight {
+    color: var(--ctp-lavender) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .ui-datepicker .ui-datepicker-days-cell-over a {
+    background-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode a.ui-state-active {
+    background: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+    font-weight: bold !important;
+}
+
+/* jQuery UI menu */
+html.dark-mode .ui-menu {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark-mode .ui-menu .ui-menu-item {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .ui-menu .ui-state-active {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* Color picker panel */
+html.dark-mode .minicolors-panel {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+    border-color: var(--ctp-surface0) !important;
+    background: var(--ctp-mantle) !important;
+}
+
+/* jQuery UI slider */
+html.dark-mode .ui-slider .ui-slider-range {
+    background: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .ui-slider .ui-slider-handle.ui-state-active {
+    background: var(--ctp-lavender) !important;
+    border-color: var(--ctp-overlay0) !important;
+}
+
+/* ── CodeMirror / RAW editor ──────────────────────────────── */
+html.dark-mode .formcontent.raweditor .CodeMirror {
+    color: var(--ctp-text) !important;
+    background-color: var(--ctp-base) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .formcontent.raweditor .CodeMirror-focused {
+    background-color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .CodeMirror-selected,
+html.dark-mode .CodeMirror-line::selection,
+html.dark-mode .CodeMirror-line > span::selection,
+html.dark-mode .CodeMirror-line > span > span::selection {
+    background: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .CodeMirror-gutters {
+    background-color: var(--ctp-surface0) !important;
+    border: 0 !important;
+}
+
+html.dark-mode .CodeMirror-activeline-background {
+    background: var(--ctp-surface0) !important;
+}
+
+/* ── TinyMCE editor ────────────────────────────────────────── */
+html.dark-mode .html-editor .editor-toolbar {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .html-editor .editor-toolbar .mce-i-html {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .html-editor .editor-toolbar .mce-i-html:hover,
+html.dark-mode .html-editor .editor-toolbar .mce-i-html:focus {
+    background-color: var(--ctp-surface0) !important;
+    border-color: transparent !important;
+}
+
+html.dark-mode div.tox.tox-tinymce {
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode div.tox .tox-toolbar {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode div.tox .tox-toolbar-overlord > div {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode div.tox .tox-tbtn,
+html.dark-mode div.tox .tox-split-button,
+html.dark-mode div.tox .tox-swatches__picker-btn {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-tbtn svg,
+html.dark-mode div.tox .tox-split-button svg,
+html.dark-mode div.tox .tox-swatches__picker-btn svg {
+    fill: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-tbtn:hover,
+html.dark-mode div.tox .tox-tbtn:focus,
+html.dark-mode div.tox .tox-split-button:hover,
+html.dark-mode div.tox .tox-split-button:focus {
+    color: var(--ctp-text) !important;
+    background: var(--ctp-surface0) !important;
+    box-shadow: none !important;
+}
+
+html.dark-mode div.tox .tox-tbtn--enabled {
+    background: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode div.tox .tox-button--naked:focus:not(:disabled),
+html.dark-mode div.tox .tox-button--icon:hover:not(:disabled) {
+    color: var(--ctp-text) !important;
+    background-color: var(--ctp-surface0) !important;
+    border-color: transparent !important;
+}
+
+html.dark-mode div.tox .tox-dialog__header .tox-button--naked:hover {
+    background: transparent !important;
+}
+
+html.dark-mode div.tox .tox-selectfield select {
+    background: transparent !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-selectfield svg {
+    fill: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-color-input span::before {
+    background-color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-toolbar__group:not(:last-of-type) {
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode div.tox .tox-dialog,
+html.dark-mode div.tox .tox-dialog__header,
+html.dark-mode div.tox .tox-dialog__body,
+html.dark-mode div.tox .tox-dialog__footer,
+html.dark-mode div.tox .tox-dialog__title {
+    color: var(--ctp-text) !important;
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode div.tox .tox-textfield,
+html.dark-mode div.tox .tox-color-input > input,
+html.dark-mode div.tox .tox-label,
+html.dark-mode div.tox .tox-dialog__body-nav-item,
+html.dark-mode div.tox .tox-button--naked,
+html.dark-mode div.tox .tox-dialog__header .tox-button,
+html.dark-mode div.tox .tox-insert-table-picker__label {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button {
+    background-color: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button:hover:not(:disabled) {
+    background-color: var(--ctp-overlay0) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button:disabled {
+    opacity: 0.5 !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button.tox-button--secondary {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button.tox-button--secondary:hover:not(:disabled) {
+    background-color: var(--ctp-surface1) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__body-nav-item--active {
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode div.tox .tox-dialog-wrap__backdrop {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+html.dark-mode div.tox .tox-menu {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+    box-shadow: none !important;
+}
+
+html.dark-mode div.tox .tox-collection__item-caret svg {
+    fill: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-collection__item {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-collection__item:not(:last-child) {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode div.tox .tox-collection__item--active,
+html.dark-mode div.tox .tox-collection__item--active:not(.tox-collection__item--state-disabled) {
+    color: var(--ctp-text) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode div.tox .tox-collection__item--enabled {
+    color: var(--ctp-base) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode div.tox .tox-pop.tox-pop--top:before,
+html.dark-mode div.tox .tox-pop.tox-pop--top:after {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode div.tox .tox-pop__dialog {
+    border-color: var(--ctp-surface0) !important;
+    box-shadow: none !important;
+}
+
+/* Spellcheck */
+html.dark-mode .googie_link {
+    color: var(--ctp-red) !important;
+}
+
+/* ── Login footer ───────────────────────────────────────────── */
+html.dark-mode #login-footer a {
+    color: var(--ctp-lavender) !important;
+}
+
+/* ── OAuth buttons ──────────────────────────────────────────── */
+html.dark-mode .oauthlogin a.btn {
+    border-color: var(--ctp-surface0) !important;
+}
+
+/* ── Responsive / mobile overrides ──────────────────────────── */
+html.dark-mode.layout-phone #layout-menu {
+    background: var(--ctp-mantle) !important;
+}
+
+html.dark-mode.layout-small .popover,
+html.dark-mode.layout-phone .popover {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode.layout-small .popover-header,
+html.dark-mode.layout-phone .popover-header {
+    background: var(--ctp-mantle) !important;
+    border-bottom-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode.layout-small .popover-overlay,
+html.dark-mode.layout-phone .popover-overlay {
+    background: rgba(0, 0, 0, 0.7) !important;
+}
+
+html.dark-mode.layout-small .popover .listing li:last-child,
+html.dark-mode.layout-phone .popover .listing li:last-child {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode.layout-small .popover .menu .dropbutton a.dropdown,
+html.dark-mode.layout-phone .popover .menu .dropbutton a.dropdown {
+    background: transparent !important;
+}
+
+/* Mobile dialog overrides */
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-titlebar {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-buttonpane {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-primary,
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-secondary {
+    color: var(--ctp-text) !important;
+    background: transparent !important;
+}
+
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-danger {
+    color: var(--ctp-red) !important;
+    background: transparent !important;
+}
+
+/* ── Misc / missing small selectors ─────────────────────────── */
+
+/* Disabled form elements */
+html.dark-mode input:disabled,
+html.dark-mode select:disabled {
+    opacity: 0.5;
+}
+
+/* Multi-input focused state */
+html.dark-mode .multi-input:not(.is-invalid) > .content {
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .multi-input:not(.is-invalid) > .content.focused {
+    border-color: var(--ctp-lavender) !important;
+}
+
+/* Recipient input pill styling */
+html.dark-mode .recipient-input .recipient {
+    background-color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .recipient-input .recipient .name {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .recipient-input .recipient a.button.icon {
+    color: var(--ctp-text) !important;
+}
+
+/* Tag edit widget */
+html.dark-mode li.tagedit-listelement-old {
+    border-color: var(--ctp-surface1) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* Popover separator */
+html.dark-mode .popover .menu li.separator {
+    background-color: transparent !important;
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .popover .menu ul + li.separator {
+    border-top-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .popover-body {
+    color: var(--ctp-text) !important;
+}
+
+/* Toolbar dropdown button separator */
+html.dark-mode ul.menu.toolbar .dropbutton a.dropdown:hover {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* Body-level (non dark-mode) primary color for taskmenu buttons and elements */
+#taskmenu .action-buttons a,
+#taskmenu .action-buttons a:hover {
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode #layout-sidebar,
+html.dark-mode #layout-sidebar .header,
+html.dark-mode .app-navigation,
+html.dark-mode .files-navigation {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode #layout-list,
+html.dark-mode #layout-content {
+    background-color: transparent !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode #layout > div > .footer {
+    background-color: transparent !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode #layout > div > .header,
+html.dark-mode .header[role="toolbar"] {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode #layout > div > .header a.button,
+html.dark-mode .header a.button {
+    color: var(--ctp-text) !important;
+}
+
+/* Logo opacity in dark mode */
+html.dark-mode #logo {
+    opacity: .8;
+}
+
+/* Message warning icon */
+html.dark-mode .suspicious-address-warning:before {
+    color: var(--ctp-red) !important;
+}
+
+/* Compose attachments area */
+html.dark-mode #compose-attachments {
+    background-color: var(--ctp-base) !important;
+}
+
+/* Message status bar (compose) */
+html.dark-mode #composestatusbar a.button {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* Button focus styles */
+html.dark-mode .btn-primary:focus {
+    box-shadow: 0 0 0 .2rem var(--ctp-primary-boxshadow) !important;
+}
+
+html.dark-mode .btn-secondary:focus {
+    box-shadow: 0 0 0 .2rem var(--ctp-primary-boxshadow) !important;
+}
+
+html.dark-mode .btn-danger:focus {
+    box-shadow: 0 0 0 .2rem var(--ctp-primary-boxshadow) !important;
+}
+
+/* Input focus state overrides */
+html.dark-mode .form-control:disabled,
+html.dark-mode .custom-select:disabled {
+    opacity: 0.5;
+}
+
+/* Invalid input state */
+html.dark-mode .form-control.is-invalid {
+    border-color: var(--ctp-red) !important;
+}
+
+html.dark-mode .form-control.is-invalid:focus {
+    border-color: var(--ctp-red) !important;
+    box-shadow: 0 0 0 .2rem rgba(243, 139, 168, 0.3) !important;
+}
+
+html.dark-mode .invalid-feedback {
+    color: var(--ctp-red) !important;
+}
+
+/* Button disabled */
+html.dark-mode .btn:disabled,
+html.dark-mode .btn.disabled {
+    opacity: 0.5 !important;
+}
+
+/* Column resizer (visible area style) */
+html.dark-mode .column-resizer.active {
+    background-color: rgba(203, 166, 247, 0.1) !important;
+}
+
+/* ── Image tools sidebar ───────────────────────────── */
+html.dark-mode .image-tools {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode .image-tools a {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .image-tools a:focus,
+html.dark-mode .image-tools a:hover {
+    background-color: var(--ctp-surface0) !important;
 }

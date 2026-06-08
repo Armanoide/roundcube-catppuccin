@@ -1,0 +1,24 @@
+/* Catppuccin Macchiato palette */
+:root {
+    --ctp-base:           #24273a;
+    --ctp-mantle:         #1e2030;
+    --ctp-crust:          #181926;
+    --ctp-surface0:       #363a4f;
+    --ctp-surface1:       #494d64;
+    --ctp-surface2:       #5b6078;
+    --ctp-overlay0:       #6e738d;
+    --ctp-overlay1:       #8087a2;
+    --ctp-overlay2:       #939ab7;
+    --ctp-subtext0:       #a5adcb;
+    --ctp-subtext1:       #b8c0e0;
+    --ctp-text:           #cad3f5;
+    --ctp-lavender:       #b7bdf8;
+    --ctp-blue:           #8aadf4;
+    --ctp-sapphire:       #91d7e3;
+    --ctp-red:            #ed8796;
+    --ctp-red-alt:        #ee99a0;
+    --ctp-green:          #a6da95;
+    --ctp-yellow:         #eed49f;
+    --ctp-primary-boxshadow:       rgba(183, 189, 248, 0.2);
+    --ctp-primary-boxshadow-hover: rgba(183, 189, 248, 0.3);
+}

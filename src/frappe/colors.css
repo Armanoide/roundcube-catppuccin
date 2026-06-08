@@ -1,0 +1,24 @@
+/* Catppuccin Frappé palette */
+:root {
+    --ctp-base:           #303446;
+    --ctp-mantle:         #292c3c;
+    --ctp-crust:          #232634;
+    --ctp-surface0:       #414559;
+    --ctp-surface1:       #51576d;
+    --ctp-surface2:       #626880;
+    --ctp-overlay0:       #737994;
+    --ctp-overlay1:       #838ba7;
+    --ctp-overlay2:       #949cbb;
+    --ctp-subtext0:       #a5adce;
+    --ctp-subtext1:       #b5bfe2;
+    --ctp-text:           #c6d0f5;
+    --ctp-lavender:       #babbf1;
+    --ctp-blue:           #8caaee;
+    --ctp-sapphire:       #99d1db;
+    --ctp-red:            #e78284;
+    --ctp-red-alt:        #ea999c;
+    --ctp-green:          #a6d189;
+    --ctp-yellow:         #ef9f76;
+    --ctp-primary-boxshadow:       rgba(186, 187, 241, 0.2);
+    --ctp-primary-boxshadow-hover: rgba(186, 187, 241, 0.3);
+}
