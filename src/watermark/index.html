@@ -33,6 +33,18 @@ html.dark-mode > body {
     }
   } catch (e) { }
 </script>
+<script>
+  var colors = {
+    mocha:     { bg: '#1e1e2e' },
+    latte:     { bg: '#eff1f5' },
+    macchiato: { bg: '#24273a' },
+    frappe:    { bg: '#303446' },
+  };
+  var cookieVal = document.cookie.match(/catppuccinFlavor=([^;]+)/);
+  var flavor = cookieVal ? cookieVal[1] : 'mocha';
+  var c = colors[flavor];
+  document.body.style.background = c.bg;
+</script>
 </head>
 <body></body>
 </html>
