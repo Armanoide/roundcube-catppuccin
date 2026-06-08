@@ -19,7 +19,8 @@ class roundcube_catppuccin extends rcube_plugin
         if ($rcmail->config->get('skin') === 'elastic') {
             $flavor = $rcmail->config->get('catppuccin_flavor', 'mocha');
             $rcmail->output->set_cookie('catppuccinFlavor', $flavor, time() + 86400, '/');
-            $this->include_stylesheet("src/{$flavor}/catppuccin.css");
+            $this->include_stylesheet("src/{$flavor}/colors.css");
+            $this->include_stylesheet("src/theme.css");
         }
     }
 }

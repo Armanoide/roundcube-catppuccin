@@ -1,0 +1,23 @@
+/* Catppuccin Mocha palette */
+:root {
+    --ctp-base:           #1e1e2e;
+    --ctp-mantle:         #11111b;
+    --ctp-crust:          #181825;
+    --ctp-surface0:       #313244;
+    --ctp-surface1:       #45475a;
+    --ctp-surface2:       #585b70;
+    --ctp-overlay0:       #7f849c;
+    --ctp-overlay1:       #9399b2;
+    --ctp-overlay2:       #6c7086;
+    --ctp-subtext0:       #a6adc8;
+    --ctp-subtext1:       #bac2de;
+    --ctp-text:           #cdd6f4;
+    --ctp-lavender:       #cba6f7;
+    --ctp-blue:           #89b4fa;
+    --ctp-sapphire:       #b4befe;
+    --ctp-red:            #f38ba8;
+    --ctp-red-alt:        #e78284;
+    --ctp-yellow:         #f3cf58;
+    --ctp-primary-boxshadow:     rgba(203, 166, 247, 0.2);
+    --ctp-primary-boxshadow-hover: rgba(203, 166, 247, 0.3);
+}
