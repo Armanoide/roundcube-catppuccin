@@ -61,8 +61,9 @@ services:
 ```
 
 Mount your plugins directory to persist the installed plugin across container restarts.
+Roundcube `config.inc.php`
+
 ```php
-Roundcube config.inc.php
 <?php
 $config['plugins'] = [
     'archive',
