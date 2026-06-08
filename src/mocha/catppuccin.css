@@ -310,10 +310,9 @@ html.dark-mode #layout-menu .special-buttons a {
 
 html.dark-mode #layout-menu .special-buttons a:hover {
     background-color: #313244 !important;
-    color: #f38ba8 !important; /* Catppuccin Red for explicit visual feedback */
 }
 
-html.dark-mode #layout-menu .special-buttons .logout a:hover {
+html.dark-mode #layout-menu .special-buttons a:hover.logout {
     background-color: #313244 !important;
     color: #f38ba8 !important; /* Catppuccin Red for explicit visual feedback */
 }
@@ -518,4 +517,40 @@ html.dark-mode #toolbar-list-menu li a[aria-disabled="true"] {
     background-color: transparent !important;
     cursor: not-allowed !important;
 }
+
+
+html.dark-mode #contactpic, html.dark-mode img.contactphoto {
+  background-color: #313244!important;
+}
+
+html.dark-mode .menu a:not(.disabled):hover, html.dark-mode .menu a:not(.disabled):focus {
+  background-color: transparent;
+}
+
+html.dark-mode .custom-switch .custom-control-input:checked~.custom-control-label::before {
+  background-color: #cba6f7 !important
+}
+
+.custom-switch .custom-control-input:checked~.custom-control-label::before {
+  border-color: #cba6f7 !important;
+}
+
+.btn-primary {
+  background: #cba6f7 !important;
+  border-color: #cba6f7 !important;
+}
+
+html.dark-mode .listing tr.selected td {
+  color: #11111b !important;
+}
+
+#messagestack .loading {
+    background-color: #313244 !important;
+  color: #cba6f7 !important;
+}
+
+.ui.alert.loading>i.icon:before {
+  color: #cba6f7 !important;
+}
+
 
