@@ -1,0 +1,50 @@
+/* base.css — palette overrides, body layout, global bases */
+
+/* ── Reset / basic palette ───────────────────────────────────────── */
+:root {
+    --primary: var(--ctp-lavender) !important;
+    --color-primary: var(--ctp-lavender) !important;
+    --color-primary-hover: var(--ctp-overlay0) !important;
+    --color-primary-dark: var(--ctp-surface0) !important;
+    --color-link: var(--ctp-blue) !important;
+    --color-link-hover: var(--ctp-sapphire) !important;
+}
+
+/* ── Layout ──────────────────────────────────────────────────────── */
+body, #layout, .app-navigation, .files-navigation {
+    background-color: var(--ctp-base) !important;
+    color: var(--ctp-text) !important;
+}
+
+#layout-sidebar, #layout-sidebar .header, .taskmenu {
+    background-color: var(--ctp-mantle) !important;
+}
+
+/* ── Task menu & primary buttons ─────────────────────────────────── */
+.taskmenu .action.button, .button.main, .btn-primary {
+    background-color: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+}
+
+.listitem.selected, .listrecord.selected {
+    background-color: var(--ctp-surface0) !important;
+    border-left: 4px solid var(--ctp-lavender) !important;
+}
+
+/* Primary button */
+.btn-primary {
+    background: var(--ctp-lavender) !important;
+    border-color: var(--ctp-lavender) !important;
+}
+
+/* ── Focus / selection borders (non touch) ───────────────────────── */
+html:not(.touch) .listing li>a:focus,
+html:not(.touch) .listing.focus tbody tr.focused>td:first-child,
+html:not(.touch) .listing.focus:not(.withselection) tbody tr.focused>td.selection+td {
+    border-left: 5px solid var(--ctp-base);
+}
+
+/* ── Links & contacts ────────────────────────────────────────────── */
+a.rcmContactAddress, .header-links a, a.extwin.hidden-small {
+    color: var(--ctp-lavender) !important;
+}

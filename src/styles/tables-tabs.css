@@ -1,0 +1,72 @@
+/* tables-tabs.css — tab navigation, table styles, table widget */
+
+/* ── Tab navigation ──────────────────────────────────────────── */
+html.dark-mode .nav-tabs,
+html:not(.dark-mode) .nav-tabs {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .nav-tabs .nav-link,
+html:not(.dark-mode) .nav-tabs .nav-link {
+    color: var(--ctp-text) !important;
+    border-color: transparent;
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .nav-tabs .nav-link:hover,
+html:not(.dark-mode) .nav-tabs .nav-link:hover {
+    background: var(--ctp-surface0) !important;
+    border-color: var(--ctp-surface1) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .nav-tabs .nav-link.active,
+html:not(.dark-mode) .nav-tabs .nav-link.active {
+    background: var(--ctp-base) !important;
+    border-color: var(--ctp-surface0) !important;
+    border-bottom-color: transparent !important;
+    color: var(--ctp-lavender) !important;
+}
+
+/* ── Tables ──────────────────────────────────────────────────── */
+html.dark-mode .table,
+html:not(.dark-mode) .table {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .table td,
+html.dark-mode .table th,
+html.dark-mode .table thead th,
+html:not(.dark-mode) .table td,
+html:not(.dark-mode) .table th,
+html:not(.dark-mode) .table thead th {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .table tr.deleted td,
+html:not(.dark-mode) .table tr.deleted td {
+    color: var(--ctp-surface2) !important;
+}
+
+html.dark-mode .table tr.selected td,
+html:not(.dark-mode) .table tr.selected td {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* ── Table widget ────────────────────────────────────────────── */
+html.dark-mode .table-widget,
+html:not(.dark-mode) .table-widget {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .table-widget > .footer,
+html:not(.dark-mode) .table-widget > .footer {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .table-widget table.options-table tr.selected td,
+html:not(.dark-mode) .table-widget table.options-table tr.selected td {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}

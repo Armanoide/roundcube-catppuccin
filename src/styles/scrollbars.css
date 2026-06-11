@@ -1,0 +1,46 @@
+/* scrollbars.css — scrollbar styling for all scrollable areas */
+
+/* ── Body-level scrollbars (non dark-mode) ────────────────────────── */
+body::-webkit-scrollbar { background-color: var(--ctp-mantle) !important; }
+body::-webkit-scrollbar-thumb { background-color: var(--ctp-surface1) !important; }
+
+/* ── Scrollbars (all modes) ───────────────────────────────────────── */
+html.dark-mode *,
+html.dark-mode,
+html:not(.dark-mode) *,
+html:not(.dark-mode) {
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--ctp-surface1) var(--ctp-mantle) !important;
+}
+
+html.dark-mode ::-webkit-scrollbar,
+html.dark-mode *::-webkit-scrollbar,
+html:not(.dark-mode) ::-webkit-scrollbar,
+html:not(.dark-mode) *::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode ::-webkit-scrollbar-track,
+html.dark-mode *::-webkit-scrollbar-track,
+html:not(.dark-mode) ::-webkit-scrollbar-track,
+html:not(.dark-mode) *::-webkit-scrollbar-track {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb,
+html.dark-mode *::-webkit-scrollbar-thumb,
+html:not(.dark-mode) ::-webkit-scrollbar-thumb,
+html:not(.dark-mode) *::-webkit-scrollbar-thumb {
+    background-color: var(--ctp-surface1) !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--ctp-mantle) !important;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb:hover,
+html.dark-mode *::-webkit-scrollbar-thumb:hover,
+html:not(.dark-mode) ::-webkit-scrollbar-thumb:hover,
+html:not(.dark-mode) *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--ctp-overlay0) !important;
+}

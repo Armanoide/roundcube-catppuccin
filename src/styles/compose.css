@@ -1,0 +1,69 @@
+/* compose.css — compose form, headers, body, editor, attachments */
+
+/* ── Compose form ──────────────────────────────────────────────────── */
+/* Message composition form and headers wrapper */
+html.dark-mode .formcontent.scroller,
+html.dark-mode #compose-headers,
+html.dark-mode .compose-headers,
+html:not(.dark-mode) .formcontent.scroller,
+html:not(.dark-mode) #compose-headers,
+html:not(.dark-mode) .compose-headers {
+    background-color: var(--ctp-base) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* Labels (From, To, Subject, etc.) */
+html.dark-mode .compose-headers .col-form-label,
+html:not(.dark-mode) .compose-headers .col-form-label {
+    color: var(--ctp-lavender) !important;
+    font-weight: bold;
+}
+
+/* Action buttons inside input groups */
+html.dark-mode .input-group-append .input-group-text,
+html:not(.dark-mode) .input-group-append .input-group-text {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+    border: 1px solid var(--ctp-surface1) !important;
+}
+
+html.dark-mode .input-group-append .input-group-text:hover,
+html:not(.dark-mode) .input-group-append .input-group-text:hover {
+    background-color: var(--ctp-overlay0) !important;
+    color: var(--ctp-base) !important;
+}
+
+/* Message text area container and toolbar */
+html.dark-mode #composebodycontainer,
+html.dark-mode #composebody,
+html:not(.dark-mode) #composebodycontainer,
+html:not(.dark-mode) #composebody {
+    background-color: var(--ctp-base) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .editor-toolbar,
+html:not(.dark-mode) .editor-toolbar {
+    background-color: var(--ctp-mantle) !important;
+    border-top: 1px solid var(--ctp-surface0) !important;
+}
+
+/* Dropdown options */
+html.dark-mode .custom-select option,
+html:not(.dark-mode) .custom-select option {
+    background-color: var(--ctp-mantle) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* Compose attachments area */
+html.dark-mode #compose-attachments,
+html:not(.dark-mode) #compose-attachments {
+    background-color: var(--ctp-base) !important;
+}
+
+/* Message status bar (compose) */
+html.dark-mode #composestatusbar a.button,
+html:not(.dark-mode) #composestatusbar a.button {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}

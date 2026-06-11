@@ -1,0 +1,188 @@
+/* ui-widgets.css — jQuery UI (datepicker, slider, menu), CodeMirror, skin selection, PGP */
+
+/* ── Skin selection thumbnails ────────────────────────────── */
+html.dark-mode .skinselection .skinthumbnail,
+html:not(.dark-mode) .skinselection .skinthumbnail {
+    border-color: var(--ctp-surface1) !important;
+    background: var(--ctp-surface0) !important;
+}
+
+/* ── PGP key import dialog ────────────────────────────────── */
+html.dark-mode .pgpkeyimport div.key.revoked,
+html.dark-mode .pgpkeyimport div.key.disabled,
+html:not(.dark-mode) .pgpkeyimport div.key.revoked,
+html:not(.dark-mode) .pgpkeyimport div.key.disabled {
+    color: var(--ctp-surface2) !important;
+}
+
+html.dark-mode .pgpkeyimport li.uid::before,
+html:not(.dark-mode) .pgpkeyimport li.uid::before {
+    opacity: 1 !important;
+}
+
+/* ── jQuery UI widgets ─────────────────────────────────────── */
+html.dark-mode .ui-widget,
+html:not(.dark-mode) .ui-widget {
+    border-color: var(--ctp-surface0) !important;
+}
+
+/* Overlay — same in both modes */
+html.dark-mode .ui-widget-overlay,
+html:not(.dark-mode) .ui-widget-overlay {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+html.dark-mode .ui-widget-header,
+html.dark-mode .ui-widget-content,
+html:not(.dark-mode) .ui-widget-header,
+html:not(.dark-mode) .ui-widget-content {
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-titlebar,
+html:not(.dark-mode) .ui-dialog .ui-dialog-titlebar {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-title,
+html.dark-mode .ui-dialog .ui-dialog-titlebar-close,
+html:not(.dark-mode) .ui-dialog .ui-dialog-title,
+html:not(.dark-mode) .ui-dialog .ui-dialog-titlebar-close {
+    color: var(--ctp-text) !important;
+    background: transparent !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-buttonpane,
+html:not(.dark-mode) .ui-dialog .ui-dialog-buttonpane {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-buttonpane a.btn-link,
+html:not(.dark-mode) .ui-dialog .ui-dialog-buttonpane a.btn-link {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .ui-dialog .ui-dialog-buttonpane a.btn-link:focus,
+html:not(.dark-mode) .ui-dialog .ui-dialog-buttonpane a.btn-link:focus {
+    background: var(--ctp-surface0) !important;
+}
+
+/* ── Datepicker ───────────────────────────────────────────── */
+html.dark-mode .ui-datepicker .ui-datepicker-header,
+html:not(.dark-mode) .ui-datepicker .ui-datepicker-header {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-mantle) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .ui-datepicker th,
+html:not(.dark-mode) .ui-datepicker th {
+    font-weight: normal !important;
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .ui-datepicker .ui-datepicker-prev,
+html.dark-mode .ui-datepicker .ui-datepicker-next,
+html.dark-mode .ui-datepicker .ui-state-default,
+html.dark-mode .ui-datepicker.ui-widget-content .ui-state-default,
+html:not(.dark-mode) .ui-datepicker .ui-datepicker-prev,
+html:not(.dark-mode) .ui-datepicker .ui-datepicker-next,
+html:not(.dark-mode) .ui-datepicker .ui-state-default,
+html:not(.dark-mode) .ui-datepicker.ui-widget-content .ui-state-default {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .ui-datepicker .ui-state-highlight,
+html.dark-mode .ui-datepicker.ui-widget-content .ui-state-highlight,
+html:not(.dark-mode) .ui-datepicker .ui-state-highlight,
+html:not(.dark-mode) .ui-datepicker.ui-widget-content .ui-state-highlight {
+    color: var(--ctp-lavender) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .ui-datepicker .ui-datepicker-days-cell-over a,
+html:not(.dark-mode) .ui-datepicker .ui-datepicker-days-cell-over a {
+    background-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode a.ui-state-active,
+html:not(.dark-mode) a.ui-state-active {
+    background: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+    font-weight: bold !important;
+}
+
+/* ── jQuery UI menu ───────────────────────────────────────── */
+html.dark-mode .ui-menu,
+html:not(.dark-mode) .ui-menu {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark-mode .ui-menu .ui-menu-item,
+html:not(.dark-mode) .ui-menu .ui-menu-item {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .ui-menu .ui-state-active,
+html:not(.dark-mode) .ui-menu .ui-state-active {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* ── Color picker panel ───────────────────────────────────── */
+html.dark-mode .minicolors-panel,
+html:not(.dark-mode) .minicolors-panel {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+    border-color: var(--ctp-surface0) !important;
+    background: var(--ctp-mantle) !important;
+}
+
+/* ── jQuery UI slider ─────────────────────────────────────── */
+html.dark-mode .ui-slider .ui-slider-range,
+html:not(.dark-mode) .ui-slider .ui-slider-range {
+    background: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .ui-slider .ui-slider-handle.ui-state-active,
+html:not(.dark-mode) .ui-slider .ui-slider-handle.ui-state-active {
+    background: var(--ctp-lavender) !important;
+    border-color: var(--ctp-overlay0) !important;
+}
+
+/* ── CodeMirror / RAW editor ──────────────────────────────── */
+html.dark-mode .formcontent.raweditor .CodeMirror,
+html:not(.dark-mode) .formcontent.raweditor .CodeMirror {
+    color: var(--ctp-text) !important;
+    background-color: var(--ctp-base) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .formcontent.raweditor .CodeMirror-focused,
+html:not(.dark-mode) .formcontent.raweditor .CodeMirror-focused {
+    background-color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .CodeMirror-selected,
+html.dark-mode .CodeMirror-line::selection,
+html.dark-mode .CodeMirror-line > span::selection,
+html.dark-mode .CodeMirror-line > span > span::selection,
+html:not(.dark-mode) .CodeMirror-selected,
+html:not(.dark-mode) .CodeMirror-line::selection,
+html:not(.dark-mode) .CodeMirror-line > span::selection,
+html:not(.dark-mode) .CodeMirror-line > span > span::selection {
+    background: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .CodeMirror-gutters,
+html:not(.dark-mode) .CodeMirror-gutters {
+    background-color: var(--ctp-surface0) !important;
+    border: 0 !important;
+}
+
+html.dark-mode .CodeMirror-activeline-background,
+html:not(.dark-mode) .CodeMirror-activeline-background {
+    background: var(--ctp-surface0) !important;
+}

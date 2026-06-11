@@ -1,0 +1,120 @@
+/* menus-popovers.css — context menus, popovers, dropdowns, hover menus */
+
+/* ── Context menus ──────────────────────────────────────────────── */
+html.dark-mode ul.menu.listing,
+html:not(.dark-mode) ul.menu.listing {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode ul.menu.listing li a,
+html:not(.dark-mode) ul.menu.listing li a {
+    color: var(--ctp-text) !important;
+    background-color: transparent !important;
+}
+
+html.dark-mode ul.menu.listing li a:hover,
+html.dark-mode ul.menu.listing li a:focus,
+html:not(.dark-mode) ul.menu.listing li a:hover,
+html:not(.dark-mode) ul.menu.listing li a:focus {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+/* ── Select menu / popover dropdowns ──────────────────────────── */
+html.dark-mode .select-menu,
+html:not(.dark-mode) .select-menu {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .select-menu .listing li,
+html:not(.dark-mode) .select-menu .listing li {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+/* ── Popover directional arrows ───────────────────────────────── */
+html.dark-mode .bs-popover-auto[x-placement^="right"] > .arrow::after,
+html.dark-mode .bs-popover-right > .arrow::after,
+html:not(.dark-mode) .bs-popover-auto[x-placement^="right"] > .arrow::after,
+html:not(.dark-mode) .bs-popover-right > .arrow::after {
+    border-right-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .bs-popover-auto[x-placement^="left"] > .arrow::after,
+html.dark-mode .bs-popover-left > .arrow::after,
+html:not(.dark-mode) .bs-popover-auto[x-placement^="left"] > .arrow::after,
+html:not(.dark-mode) .bs-popover-left > .arrow::after {
+    border-left-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .bs-popover-auto[x-placement^="top"] > .arrow::after,
+html.dark-mode .bs-popover-top > .arrow::after,
+html:not(.dark-mode) .bs-popover-auto[x-placement^="top"] > .arrow::after,
+html:not(.dark-mode) .bs-popover-top > .arrow::after {
+    border-top-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .bs-popover-auto[x-placement^="bottom"] > .arrow::after,
+html.dark-mode .bs-popover-bottom > .arrow::after,
+html:not(.dark-mode) .bs-popover-auto[x-placement^="bottom"] > .arrow::after,
+html:not(.dark-mode) .bs-popover-bottom > .arrow::after {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+/* ── Listing hover menu ───────────────────────────────────────── */
+html.dark-mode .listing-hover-menu,
+html:not(.dark-mode) .listing-hover-menu {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark-mode .listing-hover-menu a.button,
+html:not(.dark-mode) .listing-hover-menu a.button {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .listing-hover-menu a.button:hover,
+html:not(.dark-mode) .listing-hover-menu a.button:hover {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .listing-hover-menu span.txt,
+html:not(.dark-mode) .listing-hover-menu span.txt {
+    color: var(--ctp-subtext0) !important;
+}
+
+/* ── Drag layer ──────────────────────────────────────────────── */
+html.dark-mode #rcmdraglayer,
+html:not(.dark-mode) #rcmdraglayer {
+    background-color: var(--ctp-mantle) !important;
+    border: 1px solid var(--ctp-surface0) !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* ── Popover separator ───────────────────────────────────────── */
+html.dark-mode .popover .menu li.separator,
+html:not(.dark-mode) .popover .menu li.separator {
+    background-color: transparent !important;
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .popover .menu ul + li.separator,
+html:not(.dark-mode) .popover .menu ul + li.separator {
+    border-top-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .popover-body,
+html:not(.dark-mode) .popover-body {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .menu a:not(.disabled):hover,
+html.dark-mode .menu a:not(.disabled):focus,
+html:not(.dark-mode) .menu a:not(.disabled):hover,
+html:not(.dark-mode) .menu a:not(.disabled):focus {
+    background-color: transparent;
+}

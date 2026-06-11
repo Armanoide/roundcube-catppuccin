@@ -1,0 +1,77 @@
+/* misc.css — quota, IFrame loader, column resizer, image tools, autofill, body-level globals */
+
+/* ── Quota widget ───────────────────────────────────────────── */
+html.dark-mode .quota-widget,
+html:not(.dark-mode) .quota-widget {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .quota-widget .bar,
+html:not(.dark-mode) .quota-widget .bar {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .quota-widget .value,
+html:not(.dark-mode) .quota-widget .value {
+    background-color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .quota-widget .value.warning,
+html:not(.dark-mode) .quota-widget .value.warning {
+    background-color: var(--ctp-red) !important;
+}
+
+html.dark-mode .quota-info .root,
+html:not(.dark-mode) .quota-info .root {
+    color: var(--ctp-subtext0) !important;
+    background-color: transparent !important;
+}
+
+/* ── IFrame loader ──────────────────────────────────────────── */
+html.dark-mode .iframe-loader,
+html:not(.dark-mode) .iframe-loader {
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .iframe-loader .spinner-border,
+html:not(.dark-mode) .iframe-loader .spinner-border {
+    color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+/* ── Image tools sidebar ───────────────────────────────────── */
+html.dark-mode .image-tools,
+html:not(.dark-mode) .image-tools {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode .image-tools a,
+html:not(.dark-mode) .image-tools a {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .image-tools a:focus,
+html.dark-mode .image-tools a:hover,
+html:not(.dark-mode) .image-tools a:focus,
+html:not(.dark-mode) .image-tools a:hover {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* ── Column resizer ─────────────────────────────────────────── */
+html.dark-mode .column-resizer.active,
+html:not(.dark-mode) .column-resizer.active {
+    background-color: rgba(203, 166, 247, 0.1) !important;
+}
+
+/* ── Autofill styling ──────────────────────────────────────── */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--ctp-base) inset !important;
+    -webkit-text-fill-color: var(--ctp-text) !important;
+}
+
+/* ── Body-level (non dark-mode) primary color for taskmenu buttons and elements ── */
+#taskmenu .action-buttons a,
+#taskmenu .action-buttons a:hover {
+    color: var(--ctp-lavender) !important;
+}

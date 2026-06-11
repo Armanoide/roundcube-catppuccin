@@ -1,0 +1,150 @@
+/* listing.css — selected states, folder list, message list, unread badges */
+
+/* ── Listing selected / unread ───────────────────────────────────── */
+html.dark-mode .listing li.selected,
+html.dark-mode .listing li.selected *,
+html.dark-mode .listing tr.selected td,
+html.dark-mode .listing tr.selected td *,
+html:not(.dark-mode) .listing li.selected,
+html:not(.dark-mode) .listing li.selected *,
+html:not(.dark-mode) .listing tr.selected td,
+html:not(.dark-mode) .listing tr.selected td * {
+    background-color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .listing li.selected *,
+html.dark-mode .listing tr.selected td *,
+html:not(.dark-mode) .listing li.selected *,
+html:not(.dark-mode) .listing tr.selected td * {
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode .listing .selected .unreadcount,
+html:not(.dark-mode) .listing .selected .unreadcount {
+    background-color: var(--ctp-base) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .listing .unreadcount,
+html:not(.dark-mode) .listing .unreadcount {
+    background-color: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode .listing tr.selected td,
+html:not(.dark-mode) .listing tr.selected td {
+    color: var(--ctp-mantle) !important;
+}
+
+/* ── Listing details ───────────────────────────────────────────── */
+html.dark-mode .listing li.selected ul,
+html:not(.dark-mode) .listing li.selected ul {
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .listing li.selected ul div.treetoggle,
+html:not(.dark-mode) .listing li.selected ul div.treetoggle {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .listing li.droptarget > a,
+html.dark-mode .listing tr.droptarget > td,
+html:not(.dark-mode) .listing li.droptarget > a,
+html:not(.dark-mode) .listing tr.droptarget > td {
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .listing-info,
+html:not(.dark-mode) .listing-info {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .listing span.secondary,
+html.dark-mode .contactlist span.email,
+html:not(.dark-mode) .listing span.secondary,
+html:not(.dark-mode) .contactlist span.email {
+    color: var(--ctp-subtext0) !important;
+}
+
+/* ── Message list details ────────────────────────────────────── */
+html.dark-mode .messagelist,
+html:not(.dark-mode) .messagelist {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .messagelist td.subject span.size,
+html.dark-mode .messagelist td.subject span.date,
+html.dark-mode .messagelist td.subject span.fromto,
+html:not(.dark-mode) .messagelist td.subject span.size,
+html:not(.dark-mode) .messagelist td.subject span.date,
+html:not(.dark-mode) .messagelist td.subject span.fromto {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .messagelist td.subject span.msgicon.status,
+html:not(.dark-mode) .messagelist td.subject span.msgicon.status {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .messagelist td.subject span.msgicon.status.unread,
+html.dark-mode .messagelist td.subject span.msgicon.status.replied,
+html.dark-mode .messagelist td.subject span.msgicon.status.forwarded,
+html:not(.dark-mode) .messagelist td.subject span.msgicon.status.unread,
+html:not(.dark-mode) .messagelist td.subject span.msgicon.status.replied,
+html:not(.dark-mode) .messagelist td.subject span.msgicon.status.forwarded {
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .messagelist tr.flagged td,
+html.dark-mode .messagelist tr.flagged span.size,
+html.dark-mode .messagelist tr.flagged td.subject span.subject a,
+html.dark-mode .messagelist tr.flagged td.subject span.date,
+html.dark-mode .messagelist tr.flagged td.subject span.fromto,
+html.dark-mode .messagelist tr.flagged span.attachment span,
+html:not(.dark-mode) .messagelist tr.flagged td,
+html:not(.dark-mode) .messagelist tr.flagged span.size,
+html:not(.dark-mode) .messagelist tr.flagged td.subject span.subject a,
+html:not(.dark-mode) .messagelist tr.flagged td.subject span.date,
+html:not(.dark-mode) .messagelist tr.flagged td.subject span.fromto,
+html:not(.dark-mode) .messagelist tr.flagged span.attachment span {
+    color: var(--ctp-yellow) !important;
+}
+
+html.dark-mode .messagelist tr.deleted td,
+html.dark-mode .messagelist tr.deleted td.subject span.subject a,
+html.dark-mode .messagelist tr.deleted td.subject span.date,
+html.dark-mode .messagelist tr.deleted td.subject span.fromto,
+html.dark-mode .messagelist tr.deleted td span.flag,
+html.dark-mode .messagelist tr.deleted td span.attachment span,
+html.dark-mode .messagelist tr.deleted td.subject span.msgicon.status,
+html:not(.dark-mode) .messagelist tr.deleted td,
+html:not(.dark-mode) .messagelist tr.deleted td.subject span.subject a,
+html:not(.dark-mode) .messagelist tr.deleted td.subject span.date,
+html:not(.dark-mode) .messagelist tr.deleted td.subject span.fromto,
+html:not(.dark-mode) .messagelist tr.deleted td span.flag,
+html:not(.dark-mode) .messagelist tr.deleted td span.attachment span,
+html:not(.dark-mode) .messagelist tr.deleted td.subject span.msgicon.status {
+    color: var(--ctp-surface2) !important;
+}
+
+html.dark-mode .messagelist span.attachment span,
+html:not(.dark-mode) .messagelist span.attachment span {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .messagelist tr.selected td.subject a,
+html.dark-mode .messagelist tr.selected td.subject span.fromto,
+html.dark-mode .messagelist tr.selected td.subject span.msgicon.status,
+html:not(.dark-mode) .messagelist tr.selected td.subject a,
+html:not(.dark-mode) .messagelist tr.selected td.subject span.fromto,
+html:not(.dark-mode) .messagelist tr.selected td.subject span.msgicon.status {
+    color: var(--ctp-base) !important;
+}
+
+/* ── Folders list unread badge ──────────────────────────────── */
+html.dark-mode .folderlist li.mailbox .unreadcount,
+html:not(.dark-mode) .folderlist li.mailbox .unreadcount {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+    font-weight: bold !important;
+}

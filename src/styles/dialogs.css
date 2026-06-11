@@ -1,0 +1,71 @@
+/* dialogs.css — UI dialogs, modals, button panes */
+
+/* ── Dialogs ────────────────────────────────────────────────────── */
+html.dark-mode .ui-dialog.ui-widget-content,
+html:not(.dark-mode) .ui-dialog.ui-widget-content {
+    background-color: var(--ctp-mantle) !important;
+    border: 1px solid var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .ui-dialog-content.ui-widget-content,
+html:not(.dark-mode) .ui-dialog-content.ui-widget-content {
+    background-color: transparent !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .ui-dialog-titlebar,
+html:not(.dark-mode) .ui-dialog-titlebar {
+    background-color: var(--ctp-base) !important;
+    border-bottom: 1px solid var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .ui-dialog-titlebar-close,
+html:not(.dark-mode) .ui-dialog-titlebar-close {
+    background-color: transparent !important;
+    border: none !important;
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode .ui-dialog-titlebar-close:hover,
+html:not(.dark-mode) .ui-dialog-titlebar-close:hover {
+    color: var(--ctp-red) !important;
+}
+
+html.dark-mode .ui-dialog label.col-form-label,
+html:not(.dark-mode) .ui-dialog label.col-form-label {
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode .ui-dialog-buttonpane,
+html:not(.dark-mode) .ui-dialog-buttonpane {
+    background-color: var(--ctp-base) !important;
+    border-top: 1px solid var(--ctp-surface0) !important;
+}
+
+html.dark-mode .ui-dialog-buttonset button.btn-primary.mainaction,
+html:not(.dark-mode) .ui-dialog-buttonset button.btn-primary.mainaction {
+    background-color: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+
+html.dark-mode .ui-dialog-buttonset button.btn-primary.mainaction:hover,
+html:not(.dark-mode) .ui-dialog-buttonset button.btn-primary.mainaction:hover {
+    background-color: var(--ctp-overlay0) !important;
+}
+
+html.dark-mode .ui-dialog-buttonset button.btn-secondary.cancel,
+html:not(.dark-mode) .ui-dialog-buttonset button.btn-secondary.cancel {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+    border: 1px solid var(--ctp-surface1) !important;
+}
+
+html.dark-mode .ui-dialog-buttonset button.btn-secondary.cancel:hover,
+html:not(.dark-mode) .ui-dialog-buttonset button.btn-secondary.cancel:hover {
+    background-color: var(--ctp-surface1) !important;
+    color: var(--ctp-lavender) !important;
+}

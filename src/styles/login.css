@@ -1,0 +1,97 @@
+/* login.css — login page fields, buttons, OAuth, footer */
+
+/* ── Login page ───────────────────────────────────────────────── */
+html.dark-mode .form-group.row td.input-group,
+html:not(.dark-mode) .form-group.row td.input-group {
+    background-color: transparent !important;
+}
+
+/* Icon containers left of inputs */
+html.dark-mode .input-group-prepend .input-group-text,
+html:not(.dark-mode) .input-group-prepend .input-group-text {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+    border: 1px solid var(--ctp-surface1) !important;
+    border-right: none !important;
+}
+
+/* Username and Password input fields */
+html.dark-mode .input-group-lg .form-control,
+html:not(.dark-mode) .input-group-lg .form-control {
+    background-color: var(--ctp-mantle) !important;
+    color: var(--ctp-text) !important;
+    border: 1px solid var(--ctp-surface1) !important;
+}
+
+/* Placeholder text */
+html.dark-mode .input-group-lg .form-control::placeholder,
+html:not(.dark-mode) .input-group-lg .form-control::placeholder {
+    color: var(--ctp-overlay0) !important;
+    opacity: 1;
+}
+
+/* Focus state on login fields */
+html.dark-mode .input-group-lg .form-control:focus,
+html:not(.dark-mode) .input-group-lg .form-control:focus {
+    border-color: var(--ctp-lavender) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--ctp-primary-boxshadow) !important;
+}
+
+/* Icon container adjacent to focused input */
+html.dark-mode .input-group-lg .form-control:focus ~ .input-group-prepend .input-group-text,
+html:not(.dark-mode) .input-group-lg .form-control:focus ~ .input-group-prepend .input-group-text {
+    border-color: var(--ctp-lavender) !important;
+}
+
+/* Login button container */
+html.dark-mode .formbuttons,
+html:not(.dark-mode) .formbuttons {
+    background-color: transparent !important;
+    padding-top: 10px;
+}
+
+/* Login button */
+html.dark-mode #rcmloginsubmit.btn-primary,
+html:not(.dark-mode) #rcmloginsubmit.btn-primary {
+    background-color: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+    border: 1px solid var(--ctp-lavender) !important;
+    font-weight: bold !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+html.dark-mode #rcmloginsubmit.btn-primary:hover,
+html.dark-mode #rcmloginsubmit.btn-primary:focus,
+html:not(.dark-mode) #rcmloginsubmit.btn-primary:hover,
+html:not(.dark-mode) #rcmloginsubmit.btn-primary:focus {
+    background-color: var(--ctp-overlay0) !important;
+    border-color: var(--ctp-overlay0) !important;
+    color: var(--ctp-base) !important;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px var(--ctp-primary-boxshadow-hover) !important;
+    outline: none !important;
+}
+
+/* Login footer */
+html.dark-mode #login-footer,
+html:not(.dark-mode) #login-footer {
+    color: var(--ctp-subtext0) !important;
+    background-color: transparent !important;
+}
+
+html.dark-mode #login-footer > div,
+html:not(.dark-mode) #login-footer > div {
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode #login-footer a,
+html:not(.dark-mode) #login-footer a {
+    color: var(--ctp-lavender) !important;
+}
+
+/* OAuth buttons */
+html.dark-mode .oauthlogin a.btn,
+html:not(.dark-mode) .oauthlogin a.btn {
+    border-color: var(--ctp-surface0) !important;
+}

@@ -1,0 +1,209 @@
+/* forms.css — form controls, inputs, textareas, switches, validation, upload */
+
+/* ── Form hints & placeholders ────────────────────────────────── */
+html.dark-mode ::placeholder,
+html.dark-mode .listing-info,
+html.dark-mode .listing span.secondary,
+html.dark-mode .file-upload .hint,
+html.dark-mode .contactlist span.email,
+html.dark-mode #login-footer > div,
+html.dark-mode #contacthead.readonly .source.row,
+html.dark-mode .formcontent .hint,
+html.dark-mode .propform .form-text,
+html:not(.dark-mode) ::placeholder,
+html:not(.dark-mode) .listing-info,
+html:not(.dark-mode) .listing span.secondary,
+html:not(.dark-mode) .file-upload .hint,
+html:not(.dark-mode) .contactlist span.email,
+html:not(.dark-mode) #login-footer > div,
+html:not(.dark-mode) #contacthead.readonly .source.row,
+html:not(.dark-mode) .formcontent .hint,
+html:not(.dark-mode) .propform .form-text {
+    color: var(--ctp-subtext0) !important;
+}
+
+/* ── File upload area ───────────────────────────────────────── */
+html.dark-mode .file-upload,
+html:not(.dark-mode) .file-upload {
+    border-color: var(--ctp-surface1) !important;
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode .file-upload.droptarget.active,
+html.dark-mode .file-upload.droptarget.hover,
+html:not(.dark-mode) .file-upload.droptarget.active,
+html:not(.dark-mode) .file-upload.droptarget.hover {
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .file-upload.droptarget.hover,
+html:not(.dark-mode) .file-upload.droptarget.hover {
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .file-upload .attachmentslist,
+html:not(.dark-mode) .file-upload .attachmentslist {
+    background: transparent !important;
+}
+
+/* ── Image upload widget ────────────────────────────────────── */
+html.dark-mode .image-upload,
+html:not(.dark-mode) .image-upload {
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .image-upload a.button,
+html:not(.dark-mode) .image-upload a.button {
+    background-color: var(--ctp-surface1) !important;
+}
+
+/* ── Custom switch unchecked state ──────────────────────────── */
+html.dark-mode .custom-switch .custom-control-label::before,
+html:not(.dark-mode) .custom-switch .custom-control-label::before {
+    background-color: var(--ctp-surface1) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .custom-switch .custom-control-label::after,
+html:not(.dark-mode) .custom-switch .custom-control-label::after {
+    background-color: var(--ctp-text) !important;
+}
+
+/* ── Toggle switches ────────────────────────────────────────── */
+html.dark-mode .custom-switch .custom-control-input:checked~.custom-control-label::before,
+html:not(.dark-mode) .custom-switch .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--ctp-lavender) !important;
+}
+
+.custom-switch .custom-control-input:checked~.custom-control-label::before {
+    border-color: var(--ctp-lavender) !important;
+}
+
+/* ── Disabled form elements ─────────────────────────────────── */
+html.dark-mode input:disabled,
+html.dark-mode select:disabled,
+html:not(.dark-mode) input:disabled,
+html:not(.dark-mode) select:disabled {
+    opacity: 0.5;
+}
+
+/* ── Multi-input focused state ──────────────────────────────── */
+html.dark-mode .multi-input:not(.is-invalid) > .content,
+html:not(.dark-mode) .multi-input:not(.is-invalid) > .content {
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .multi-input:not(.is-invalid) > .content.focused,
+html:not(.dark-mode) .multi-input:not(.is-invalid) > .content.focused {
+    border-color: var(--ctp-lavender) !important;
+}
+
+/* ── Recipient input pill styling ───────────────────────────── */
+html.dark-mode .recipient-input .recipient,
+html:not(.dark-mode) .recipient-input .recipient {
+    background-color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .recipient-input .recipient .name,
+html:not(.dark-mode) .recipient-input .recipient .name {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .recipient-input .recipient a.button.icon,
+html:not(.dark-mode) .recipient-input .recipient a.button.icon {
+    color: var(--ctp-text) !important;
+}
+
+/* ── Tag edit widget ────────────────────────────────────────── */
+html.dark-mode li.tagedit-listelement-old,
+html:not(.dark-mode) li.tagedit-listelement-old {
+    border-color: var(--ctp-surface1) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* ── Button focus styles ────────────────────────────────────── */
+html.dark-mode .btn-primary:focus,
+html:not(.dark-mode) .btn-primary:focus {
+    box-shadow: 0 0 0 .2rem var(--ctp-primary-boxshadow) !important;
+}
+
+html.dark-mode .btn-secondary:focus,
+html:not(.dark-mode) .btn-secondary:focus {
+    box-shadow: 0 0 0 .2rem var(--ctp-primary-boxshadow) !important;
+}
+
+html.dark-mode .btn-danger:focus,
+html:not(.dark-mode) .btn-danger:focus {
+    box-shadow: 0 0 0 .2rem var(--ctp-primary-boxshadow) !important;
+}
+
+/* ── Input focus state overrides ───────────────────────────── */
+html.dark-mode .form-control:disabled,
+html.dark-mode .custom-select:disabled,
+html:not(.dark-mode) .form-control:disabled,
+html:not(.dark-mode) .custom-select:disabled {
+    opacity: 0.5;
+}
+
+/* ── Invalid input state ──────────────────────────────────── */
+html.dark-mode .form-control.is-invalid,
+html:not(.dark-mode) .form-control.is-invalid {
+    border-color: var(--ctp-red) !important;
+}
+
+html.dark-mode .form-control.is-invalid:focus,
+html:not(.dark-mode) .form-control.is-invalid:focus {
+    border-color: var(--ctp-red) !important;
+    box-shadow: 0 0 0 .2rem rgba(243, 139, 168, 0.3) !important;
+}
+
+html.dark-mode .invalid-feedback,
+html:not(.dark-mode) .invalid-feedback {
+    color: var(--ctp-red) !important;
+}
+
+/* ── Button disabled ──────────────────────────────────────── */
+html.dark-mode .btn:disabled,
+html.dark-mode .btn.disabled,
+html:not(.dark-mode) .btn:disabled,
+html:not(.dark-mode) .btn.disabled {
+    opacity: 0.5 !important;
+}
+
+/* ── Global form input overrides ──────────────────────────── */
+/* These apply regardless of dark-mode for base form styling */
+html.dark-mode .form-control,
+html.dark-mode .custom-select,
+html.dark-mode .recipient-input,
+html.dark-mode .recipient-input input,
+html:not(.dark-mode) .form-control,
+html:not(.dark-mode) .custom-select,
+html:not(.dark-mode) .recipient-input,
+html:not(.dark-mode) .recipient-input input {
+    background-color: var(--ctp-mantle) !important;
+    color: var(--ctp-text) !important;
+    border: 1px solid var(--ctp-surface0) !important;
+}
+
+/* Focus state for form inputs */
+html.dark-mode .form-control:focus,
+html.dark-mode .custom-select:focus,
+html.dark-mode .recipient-input.focus,
+html.dark-mode .recipient-input input:focus,
+html:not(.dark-mode) .form-control:focus,
+html:not(.dark-mode) .custom-select:focus,
+html:not(.dark-mode) .recipient-input.focus,
+html:not(.dark-mode) .recipient-input input:focus {
+    border-color: var(--ctp-lavender) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--ctp-primary-boxshadow) !important;
+}
+
+/* Login/button primary fix */
+html.dark-mode a.btn.btn-primary,
+html:not(.dark-mode) a.btn.btn-primary {
+    color: var(--ctp-base) !important;
+    border-color: transparent;
+    background: none;
+}

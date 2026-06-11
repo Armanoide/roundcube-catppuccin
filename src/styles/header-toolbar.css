@@ -1,0 +1,111 @@
+/* header-toolbar.css — header titles, toolbar menus, message list header */
+
+/* ── Header / toolbar ───────────────────────────────────────────── */
+html.dark-mode .header[role="toolbar"],
+html:not(.dark-mode) .header[role="toolbar"] {
+    background-color: var(--ctp-mantle) !important;
+    border-bottom: 1px solid var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .header .header-title,
+html:not(.dark-mode) .header .header-title {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode ul.menu.toolbar,
+html:not(.dark-mode) ul.menu.toolbar {
+    background-color: transparent !important;
+}
+
+html.dark-mode ul.menu.toolbar li a,
+html.dark-mode .header .button.icon,
+html:not(.dark-mode) ul.menu.toolbar li a,
+html:not(.dark-mode) .header .button.icon {
+    color: var(--ctp-text) !important;
+    background-color: transparent !important;
+}
+
+html.dark-mode ul.menu.toolbar li a:hover,
+html.dark-mode .header .button.icon:hover,
+html:not(.dark-mode) ul.menu.toolbar li a:hover,
+html:not(.dark-mode) .header .button.icon:hover {
+    color: var(--ctp-lavender) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode ul.menu.toolbar .dropbutton a.dropdown,
+html:not(.dark-mode) ul.menu.toolbar .dropbutton a.dropdown {
+}
+
+html.dark-mode ul.menu.toolbar li a.disabled,
+html.dark-mode ul.menu.toolbar li a[aria-disabled="true"],
+html:not(.dark-mode) ul.menu.toolbar li a.disabled,
+html:not(.dark-mode) ul.menu.toolbar li a[aria-disabled="true"] {
+    color: var(--ctp-surface2) !important;
+    background-color: transparent !important;
+    cursor: not-allowed !important;
+}
+
+/* ── Message list header ────────────────────────────────────────── */
+html.dark-mode #messagelist-header.header,
+html:not(.dark-mode) #messagelist-header.header {
+    background-color: var(--ctp-mantle) !important;
+    border-bottom: 1px solid var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode #messagelist-header .header-title,
+html:not(.dark-mode) #messagelist-header .header-title {
+    color: var(--ctp-text) !important;
+    font-weight: bold !important;
+}
+
+html.dark-mode #messagelist-header .button.icon,
+html.dark-mode #toolbar-list-menu li a,
+html:not(.dark-mode) #messagelist-header .button.icon,
+html:not(.dark-mode) #toolbar-list-menu li a {
+    color: var(--ctp-text) !important;
+    background-color: transparent !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+
+html.dark-mode #messagelist-header .button.icon:hover,
+html.dark-mode #toolbar-list-menu li a:hover,
+html.dark-mode #messagelist-header .button.icon.active,
+html.dark-mode #toolbar-list-menu li a.active:hover,
+html:not(.dark-mode) #messagelist-header .button.icon:hover,
+html:not(.dark-mode) #toolbar-list-menu li a:hover,
+html:not(.dark-mode) #messagelist-header .button.icon.active,
+html:not(.dark-mode) #toolbar-list-menu li a.active:hover {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode #toolbar-list-menu li a.disabled,
+html.dark-mode #toolbar-list-menu li a[aria-disabled="true"],
+html:not(.dark-mode) #toolbar-list-menu li a.disabled,
+html:not(.dark-mode) #toolbar-list-menu li a[aria-disabled="true"] {
+    color: var(--ctp-surface2) !important;
+    background-color: transparent !important;
+    cursor: not-allowed !important;
+}
+
+/* ── Toolbar selected state ──────────────────────────────────────── */
+html.dark-mode .menu.toolbar a.selected,
+html:not(.dark-mode) .menu.toolbar a.selected {
+    color: var(--ctp-lavender) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode #taskmenu a.selected,
+html:not(.dark-mode) #taskmenu a.selected {
+    background-color: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+}
+
+/* ── Toolbar dropdown button separator ───────────────────────────── */
+html.dark-mode ul.menu.toolbar .dropbutton a.dropdown:hover,
+html:not(.dark-mode) ul.menu.toolbar .dropbutton a.dropdown:hover {
+    background-color: var(--ctp-surface0) !important;
+}

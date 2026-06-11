@@ -1,0 +1,235 @@
+/* tinymce.css — TinyMCE rich text editor styling */
+
+/* ── TinyMCE editor ────────────────────────────────────────── */
+html.dark-mode .html-editor .editor-toolbar,
+html:not(.dark-mode) .html-editor .editor-toolbar {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .html-editor .editor-toolbar .mce-i-html,
+html:not(.dark-mode) .html-editor .editor-toolbar .mce-i-html {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .html-editor .editor-toolbar .mce-i-html:hover,
+html.dark-mode .html-editor .editor-toolbar .mce-i-html:focus,
+html:not(.dark-mode) .html-editor .editor-toolbar .mce-i-html:hover,
+html:not(.dark-mode) .html-editor .editor-toolbar .mce-i-html:focus {
+    background-color: var(--ctp-surface0) !important;
+    border-color: transparent !important;
+}
+
+html.dark-mode div.tox.tox-tinymce,
+html:not(.dark-mode) div.tox.tox-tinymce {
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode div.tox .tox-toolbar,
+html:not(.dark-mode) div.tox .tox-toolbar {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode div.tox .tox-toolbar-overlord > div,
+html:not(.dark-mode) div.tox .tox-toolbar-overlord > div {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode div.tox .tox-tbtn,
+html.dark-mode div.tox .tox-split-button,
+html.dark-mode div.tox .tox-swatches__picker-btn,
+html:not(.dark-mode) div.tox .tox-tbtn,
+html:not(.dark-mode) div.tox .tox-split-button,
+html:not(.dark-mode) div.tox .tox-swatches__picker-btn {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-tbtn svg,
+html.dark-mode div.tox .tox-split-button svg,
+html.dark-mode div.tox .tox-swatches__picker-btn svg,
+html:not(.dark-mode) div.tox .tox-tbtn svg,
+html:not(.dark-mode) div.tox .tox-split-button svg,
+html:not(.dark-mode) div.tox .tox-swatches__picker-btn svg {
+    fill: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-tbtn:hover,
+html.dark-mode div.tox .tox-tbtn:focus,
+html.dark-mode div.tox .tox-split-button:hover,
+html.dark-mode div.tox .tox-split-button:focus,
+html:not(.dark-mode) div.tox .tox-tbtn:hover,
+html:not(.dark-mode) div.tox .tox-tbtn:focus,
+html:not(.dark-mode) div.tox .tox-split-button:hover,
+html:not(.dark-mode) div.tox .tox-split-button:focus {
+    color: var(--ctp-text) !important;
+    background: var(--ctp-surface0) !important;
+    box-shadow: none !important;
+}
+
+html.dark-mode div.tox .tox-tbtn--enabled,
+html:not(.dark-mode) div.tox .tox-tbtn--enabled {
+    background: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode div.tox .tox-button--naked:focus:not(:disabled),
+html.dark-mode div.tox .tox-button--icon:hover:not(:disabled),
+html:not(.dark-mode) div.tox .tox-button--naked:focus:not(:disabled),
+html:not(.dark-mode) div.tox .tox-button--icon:hover:not(:disabled) {
+    color: var(--ctp-text) !important;
+    background-color: var(--ctp-surface0) !important;
+    border-color: transparent !important;
+}
+
+html.dark-mode div.tox .tox-dialog__header .tox-button--naked:hover,
+html:not(.dark-mode) div.tox .tox-dialog__header .tox-button--naked:hover {
+    background: transparent !important;
+}
+
+html.dark-mode div.tox .tox-selectfield select,
+html:not(.dark-mode) div.tox .tox-selectfield select {
+    background: transparent !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-selectfield svg,
+html:not(.dark-mode) div.tox .tox-selectfield svg {
+    fill: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-color-input span::before,
+html:not(.dark-mode) div.tox .tox-color-input span::before {
+    background-color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-toolbar__group:not(:last-of-type),
+html:not(.dark-mode) div.tox .tox-toolbar__group:not(:last-of-type) {
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode div.tox .tox-dialog,
+html.dark-mode div.tox .tox-dialog__header,
+html.dark-mode div.tox .tox-dialog__body,
+html.dark-mode div.tox .tox-dialog__footer,
+html.dark-mode div.tox .tox-dialog__title,
+html:not(.dark-mode) div.tox .tox-dialog,
+html:not(.dark-mode) div.tox .tox-dialog__header,
+html:not(.dark-mode) div.tox .tox-dialog__body,
+html:not(.dark-mode) div.tox .tox-dialog__footer,
+html:not(.dark-mode) div.tox .tox-dialog__title {
+    color: var(--ctp-text) !important;
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-base) !important;
+}
+
+html.dark-mode div.tox .tox-textfield,
+html.dark-mode div.tox .tox-color-input > input,
+html.dark-mode div.tox .tox-label,
+html.dark-mode div.tox .tox-dialog__body-nav-item,
+html.dark-mode div.tox .tox-button--naked,
+html.dark-mode div.tox .tox-dialog__header .tox-button,
+html.dark-mode div.tox .tox-insert-table-picker__label,
+html:not(.dark-mode) div.tox .tox-textfield,
+html:not(.dark-mode) div.tox .tox-color-input > input,
+html:not(.dark-mode) div.tox .tox-label,
+html:not(.dark-mode) div.tox .tox-dialog__body-nav-item,
+html:not(.dark-mode) div.tox .tox-button--naked,
+html:not(.dark-mode) div.tox .tox-dialog__header .tox-button,
+html:not(.dark-mode) div.tox .tox-insert-table-picker__label {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button,
+html:not(.dark-mode) div.tox .tox-dialog__footer .tox-button {
+    background-color: var(--ctp-lavender) !important;
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button:hover:not(:disabled),
+html:not(.dark-mode) div.tox .tox-dialog__footer .tox-button:hover:not(:disabled) {
+    background-color: var(--ctp-overlay0) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button:disabled,
+html:not(.dark-mode) div.tox .tox-dialog__footer .tox-button:disabled {
+    opacity: 0.5 !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button.tox-button--secondary,
+html:not(.dark-mode) div.tox .tox-dialog__footer .tox-button.tox-button--secondary {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__footer .tox-button.tox-button--secondary:hover:not(:disabled),
+html:not(.dark-mode) div.tox .tox-dialog__footer .tox-button.tox-button--secondary:hover:not(:disabled) {
+    background-color: var(--ctp-surface1) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+html.dark-mode div.tox .tox-dialog__body-nav-item--active,
+html:not(.dark-mode) div.tox .tox-dialog__body-nav-item--active {
+    color: var(--ctp-lavender) !important;
+}
+
+/* Backdrop — same in both modes */
+html.dark-mode div.tox .tox-dialog-wrap__backdrop,
+html:not(.dark-mode) div.tox .tox-dialog-wrap__backdrop {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+html.dark-mode div.tox .tox-menu,
+html:not(.dark-mode) div.tox .tox-menu {
+    background-color: var(--ctp-mantle) !important;
+    border-color: var(--ctp-surface0) !important;
+    box-shadow: none !important;
+}
+
+html.dark-mode div.tox .tox-collection__item-caret svg,
+html:not(.dark-mode) div.tox .tox-collection__item-caret svg {
+    fill: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-collection__item,
+html:not(.dark-mode) div.tox .tox-collection__item {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode div.tox .tox-collection__item:not(:last-child),
+html:not(.dark-mode) div.tox .tox-collection__item:not(:last-child) {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode div.tox .tox-collection__item--active,
+html.dark-mode div.tox .tox-collection__item--active:not(.tox-collection__item--state-disabled),
+html:not(.dark-mode) div.tox .tox-collection__item--active,
+html:not(.dark-mode) div.tox .tox-collection__item--active:not(.tox-collection__item--state-disabled) {
+    color: var(--ctp-text) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode div.tox .tox-collection__item--enabled,
+html:not(.dark-mode) div.tox .tox-collection__item--enabled {
+    color: var(--ctp-base) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode div.tox .tox-pop.tox-pop--top:before,
+html.dark-mode div.tox .tox-pop.tox-pop--top:after,
+html:not(.dark-mode) div.tox .tox-pop.tox-pop--top:before,
+html:not(.dark-mode) div.tox .tox-pop.tox-pop--top:after {
+    border-bottom-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode div.tox .tox-pop__dialog,
+html:not(.dark-mode) div.tox .tox-pop__dialog {
+    border-color: var(--ctp-surface0) !important;
+    box-shadow: none !important;
+}
+
+/* ── Spellcheck ───────────────────────────────────────────── */
+html.dark-mode .googie_link,
+html:not(.dark-mode) .googie_link {
+    color: var(--ctp-red) !important;
+}

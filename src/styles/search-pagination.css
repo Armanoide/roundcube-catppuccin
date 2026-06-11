@@ -1,0 +1,33 @@
+/* search-pagination.css — search bar, pagination */
+
+/* ── Search bar ──────────────────────────────────────────────────── */
+html.dark-mode .searchbar,
+html:not(.dark-mode) .searchbar {
+    background-color: transparent !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .searchbar form:before,
+html.dark-mode .searchbar input,
+html:not(.dark-mode) .searchbar form:before,
+html:not(.dark-mode) .searchbar input {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .searchbar a,
+html:not(.dark-mode) .searchbar a {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .searchbar a.selected,
+html:not(.dark-mode) .searchbar a.selected {
+    color: var(--ctp-lavender) !important;
+}
+
+/* ── Pagination ──────────────────────────────────────────────────── */
+html.dark-mode .menu.pagenav .pagenav-text,
+html.dark-mode .menu.pagenav a,
+html:not(.dark-mode) .menu.pagenav .pagenav-text,
+html:not(.dark-mode) .menu.pagenav a {
+    color: var(--ctp-text) !important;
+}

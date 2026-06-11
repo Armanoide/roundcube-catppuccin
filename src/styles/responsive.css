@@ -1,0 +1,77 @@
+/* responsive.css — mobile/phone layout overrides, floating action buttons */
+
+/* ── Floating action buttons (mobile) ──────────────────────────── */
+html.dark-mode .floating-action-buttons a.button,
+html:not(.dark-mode) .floating-action-buttons a.button {
+    box-shadow: 0 0 5px 5px var(--ctp-surface1) !important;
+    background: var(--ctp-lavender) !important;
+}
+
+/* ── Responsive / mobile overrides ────────────────────────────── */
+html.dark-mode.layout-phone #layout-menu,
+html:not(.dark-mode).layout-phone #layout-menu {
+    background: var(--ctp-mantle) !important;
+}
+
+html.dark-mode.layout-small .popover,
+html.dark-mode.layout-phone .popover,
+html:not(.dark-mode).layout-small .popover,
+html:not(.dark-mode).layout-phone .popover {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode.layout-small .popover-header,
+html.dark-mode.layout-phone .popover-header,
+html:not(.dark-mode).layout-small .popover-header,
+html:not(.dark-mode).layout-phone .popover-header {
+    background: var(--ctp-mantle) !important;
+    border-bottom-color: var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode.layout-small .popover-overlay,
+html.dark-mode.layout-phone .popover-overlay,
+html:not(.dark-mode).layout-small .popover-overlay,
+html:not(.dark-mode).layout-phone .popover-overlay {
+    background: rgba(0, 0, 0, 0.7) !important;
+}
+
+html.dark-mode.layout-small .popover .listing li:last-child,
+html.dark-mode.layout-phone .popover .listing li:last-child,
+html:not(.dark-mode).layout-small .popover .listing li:last-child,
+html:not(.dark-mode).layout-phone .popover .listing li:last-child {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode.layout-small .popover .menu .dropbutton a.dropdown,
+html.dark-mode.layout-phone .popover .menu .dropbutton a.dropdown,
+html:not(.dark-mode).layout-small .popover .menu .dropbutton a.dropdown,
+html:not(.dark-mode).layout-phone .popover .menu .dropbutton a.dropdown {
+    background: transparent !important;
+}
+
+/* Mobile dialog overrides */
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-titlebar,
+html:not(.dark-mode).layout-phone .ui-dialog .ui-dialog-titlebar {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-buttonpane,
+html:not(.dark-mode).layout-phone .ui-dialog .ui-dialog-buttonpane {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-primary,
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-secondary,
+html:not(.dark-mode).layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-primary,
+html:not(.dark-mode).layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-secondary {
+    color: var(--ctp-text) !important;
+    background: transparent !important;
+}
+
+html.dark-mode.layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-danger,
+html:not(.dark-mode).layout-phone .ui-dialog .ui-dialog-buttonpane button.btn-danger {
+    color: var(--ctp-red) !important;
+    background: transparent !important;
+}

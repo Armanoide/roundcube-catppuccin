@@ -1,0 +1,133 @@
+/* mail-preview.css — message preview, headers, blockquotes, attachments in preview, contact photos */
+
+/* ── Attachments list ───────────────────────────────────────── */
+html.dark-mode .attachmentslist,
+html:not(.dark-mode) .attachmentslist {
+    background-color: var(--ctp-surface0) !important;
+    border: 1px solid var(--ctp-surface1) !important;
+}
+
+html.dark-mode .attachmentslist a,
+html:not(.dark-mode) .attachmentslist a {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .attachmentslist li .attachment-name,
+html:not(.dark-mode) .attachmentslist li .attachment-name {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .attachmentslist li .attachment-size,
+html:not(.dark-mode) .attachmentslist li .attachment-size {
+    color: var(--ctp-subtext0) !important;
+}
+
+/* ── Mail preview ───────────────────────────────────────────── */
+html.dark-mode #message-header .header-headers .header-title,
+html:not(.dark-mode) #message-header .header-headers .header-title {
+    color: var(--ctp-text) !important;
+    font-weight: bold !important;
+}
+
+html.dark-mode .message-partheaders,
+html:not(.dark-mode) .message-partheaders {
+    background-color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .message-partheaders table.headers-table,
+html:not(.dark-mode) .message-partheaders table.headers-table {
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .message-partheaders table.headers-table .header-title,
+html:not(.dark-mode) .message-partheaders table.headers-table .header-title {
+    font-weight: bold !important;
+}
+
+html.dark-mode .message-part,
+html:not(.dark-mode) .message-part {
+    border-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode .message-part blockquote,
+html:not(.dark-mode) .message-part blockquote {
+    background-color: var(--ctp-surface0) !important;
+    border-color: var(--ctp-blue) !important;
+    color: var(--ctp-blue) !important;
+}
+
+html.dark-mode .message-part blockquote blockquote,
+html:not(.dark-mode) .message-part blockquote blockquote {
+    border-color: var(--ctp-green) !important;
+    color: var(--ctp-green) !important;
+}
+
+html.dark-mode .message-part blockquote blockquote blockquote,
+html:not(.dark-mode) .message-part blockquote blockquote blockquote {
+    border-color: var(--ctp-red) !important;
+    color: var(--ctp-red) !important;
+}
+
+html.dark-mode .message-part blockquote span.blockquote-link,
+html:not(.dark-mode) .message-part blockquote span.blockquote-link {
+    color: var(--ctp-text) !important;
+    background: var(--ctp-base) !important;
+    border-color: var(--ctp-surface1) !important;
+}
+
+html.dark-mode .message-part span.sig,
+html:not(.dark-mode) .message-part span.sig {
+    color: var(--ctp-subtext0) !important;
+}
+
+/* HTML email body — always white background regardless of mode */
+html.dark-mode .message-htmlpart,
+html:not(.dark-mode) .message-htmlpart {
+    background-color: white !important;
+    color: #161b1d !important;
+}
+
+/* Image attachment inline */
+html.dark-mode p.image-attachment,
+html:not(.dark-mode) p.image-attachment {
+    border-color: var(--ctp-surface0) !important;
+    background-color: var(--ctp-surface0) !important;
+}
+
+html.dark-mode p.image-attachment span,
+html:not(.dark-mode) p.image-attachment span {
+    color: var(--ctp-subtext0) !important;
+}
+
+html.dark-mode fieldset.image-attachment legend,
+html:not(.dark-mode) fieldset.image-attachment legend {
+    color: var(--ctp-subtext0) !important;
+    border-color: var(--ctp-surface0) !important;
+}
+
+/* ── Contact photos ────────────────────────────────────────────── */
+html.dark-mode img.contactphoto,
+html.dark-mode #contactpic,
+html:not(.dark-mode) img.contactphoto,
+html:not(.dark-mode) #contactpic {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* Message header contact photo */
+html.dark-mode #message-header .header img.contactphoto,
+html:not(.dark-mode) #message-header .header img.contactphoto {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* Contact photos in misc section */
+html.dark-mode #contactpic,
+html:not(.dark-mode) #contactpic {
+    background-color: var(--ctp-surface0) !important;
+}
+
+/* Message warning icon */
+html.dark-mode .suspicious-address-warning:before,
+html:not(.dark-mode) .suspicious-address-warning:before {
+    color: var(--ctp-red) !important;
+}

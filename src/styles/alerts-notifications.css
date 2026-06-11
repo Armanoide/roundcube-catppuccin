@@ -1,0 +1,64 @@
+/* alerts-notifications.css — alerts, warnings, plugin messages, loading */
+
+/* ── Alerts ──────────────────────────────────────────────────────── */
+html.dark-mode .alert.alert-warning,
+html.dark-mode .boxwarning,
+html.dark-mode .alert.alert-warning i.icon:before,
+html:not(.dark-mode) .alert.alert-warning,
+html:not(.dark-mode) .boxwarning,
+html:not(.dark-mode) .alert.alert-warning i.icon:before {
+    background-color: transparent !important;
+    color: var(--ctp-yellow) !important;
+    border: none !important;
+}
+
+html.dark-mode .alert.alert-warning *,
+html.dark-mode .boxwarning *,
+html:not(.dark-mode) .alert.alert-warning *,
+html:not(.dark-mode) .boxwarning * {
+    color: var(--ctp-yellow) !important;
+}
+
+html.dark-mode .alert.alert-danger,
+html.dark-mode .alert.alert-error,
+html.dark-mode .boxerror,
+html.dark-mode .boxdanger,
+html:not(.dark-mode) .alert.alert-danger,
+html:not(.dark-mode) .alert.alert-error,
+html:not(.dark-mode) .boxerror,
+html:not(.dark-mode) .boxdanger {
+    background-color: var(--ctp-red) !important;
+    color: var(--ctp-mantle) !important;
+    border: 1px solid var(--ctp-red-alt) !important;
+}
+
+html.dark-mode .alert.alert-danger *,
+html.dark-mode .alert.alert-error *,
+html.dark-mode .alert.alert-danger i.icon:before,
+html:not(.dark-mode) .alert.alert-danger *,
+html:not(.dark-mode) .alert.alert-error *,
+html:not(.dark-mode) .alert.alert-danger i.icon:before {
+    color: var(--ctp-mantle) !important;
+}
+
+/* ── Loading indicators ──────────────────────────────────────────── */
+#messagestack .loading {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-lavender) !important;
+}
+
+.ui.alert.loading>i.icon:before {
+    color: var(--ctp-lavender) !important;
+}
+
+/* ── Plugin info message ───────────────────────────────────── */
+html.dark-mode .ui.alert .pluginmessage,
+html:not(.dark-mode) .ui.alert .pluginmessage {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+html.dark-mode .ui.alert .pluginmessage a,
+html:not(.dark-mode) .ui.alert .pluginmessage a {
+    color: var(--ctp-lavender) !important;
+}
