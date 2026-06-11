@@ -1,6 +1,8 @@
-/* alerts-notifications.css — alerts, warnings, plugin messages, loading */
+/* alerts-notifications.css — alerts, warnings, plugin messages, loading, icons */
 
-/* ── Alerts ──────────────────────────────────────────────────────── */
+/* ── Alert Dialogs (boxerror, boxwarning, boxconfirmation, boxinformation) ─── */
+
+/* Warnings — Yellow (style guide: Warnings → Yellow) */
 html.dark-mode .alert.alert-warning,
 html.dark-mode .boxwarning,
 html.dark-mode .alert.alert-warning i.icon:before,
@@ -19,6 +21,7 @@ html:not(.dark-mode) .boxwarning * {
     color: var(--ctp-yellow) !important;
 }
 
+/* Errors — Red (style guide: Errors → Red) */
 html.dark-mode .alert.alert-danger,
 html.dark-mode .alert.alert-error,
 html.dark-mode .boxerror,
@@ -28,7 +31,7 @@ html:not(.dark-mode) .alert.alert-error,
 html:not(.dark-mode) .boxerror,
 html:not(.dark-mode) .boxdanger {
     background-color: var(--ctp-red) !important;
-    color: var(--ctp-mantle) !important;
+    color: var(--ctp-base) !important;
     border: 1px solid var(--ctp-red-alt) !important;
 }
 
@@ -38,20 +41,104 @@ html.dark-mode .alert.alert-danger i.icon:before,
 html:not(.dark-mode) .alert.alert-danger *,
 html:not(.dark-mode) .alert.alert-error *,
 html:not(.dark-mode) .alert.alert-danger i.icon:before {
-    color: var(--ctp-mantle) !important;
+    color: var(--ctp-base) !important;
 }
 
-/* ── Loading indicators ──────────────────────────────────────────── */
+/* Success — Green (style guide: Success → Green) */
+html.dark-mode .alert.alert-success,
+html.dark-mode .boxconfirmation,
+html.dark-mode .alert.alert-success i.icon:before,
+html:not(.dark-mode) .alert.alert-success,
+html:not(.dark-mode) .boxconfirmation,
+html:not(.dark-mode) .alert.alert-success i.icon:before {
+    background-color: var(--ctp-green) !important;
+    color: var(--ctp-base) !important;
+    border: 1px solid var(--ctp-green) !important;
+}
+
+html.dark-mode .alert.alert-success *,
+html.dark-mode .boxconfirmation *,
+html:not(.dark-mode) .alert.alert-success *,
+html:not(.dark-mode) .boxconfirmation * {
+    color: var(--ctp-base) !important;
+}
+
+/* Information — Teal (style guide: Information → Teal) */
+html.dark-mode .alert.alert-info,
+html.dark-mode .boxinformation,
+html.dark-mode .alert.alert-info i.icon:before,
+html:not(.dark-mode) .alert.alert-info,
+html:not(.dark-mode) .boxinformation,
+html:not(.dark-mode) .alert.alert-info i.icon:before {
+    background-color: var(--ctp-teal) !important;
+    color: var(--ctp-base) !important;
+    border: 1px solid var(--ctp-teal) !important;
+}
+
+html.dark-mode .alert.alert-info *,
+html.dark-mode .boxinformation *,
+html:not(.dark-mode) .alert.alert-info *,
+html:not(.dark-mode) .boxinformation * {
+    color: var(--ctp-base) !important;
+}
+
+/* ── Message Stack Alerts (inline notifications at bottom of screen) ──── */
+html.dark-mode #messagestack .alert-warning,
+html:not(.dark-mode) #messagestack .alert-warning {
+    background-color: var(--ctp-yellow) !important;
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode #messagestack .alert-danger,
+html:not(.dark-mode) #messagestack .alert-danger {
+    background-color: var(--ctp-red) !important;
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode #messagestack .alert-success,
+html:not(.dark-mode) #messagestack .alert-success {
+    background-color: var(--ctp-green) !important;
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode #messagestack .alert-info,
+html:not(.dark-mode) #messagestack .alert-info {
+    background-color: var(--ctp-teal) !important;
+    color: var(--ctp-base) !important;
+}
+
+/* Alert icons in message stack */
+html.dark-mode #messagestack .alert-success > i.icon:before,
+html:not(.dark-mode) #messagestack .alert-success > i.icon:before {
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode #messagestack .alert-warning > i.icon:before,
+html:not(.dark-mode) #messagestack .alert-warning > i.icon:before {
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode #messagestack .alert-danger > i.icon:before,
+html:not(.dark-mode) #messagestack .alert-danger > i.icon:before {
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode #messagestack .alert-info > i.icon:before,
+html:not(.dark-mode) #messagestack .alert-info > i.icon:before {
+    color: var(--ctp-base) !important;
+}
+
+/* ── Loading indicators ────────────────────────────────────────────────────── */
 #messagestack .loading {
     background-color: var(--ctp-surface0) !important;
     color: var(--ctp-lavender) !important;
 }
 
-.ui.alert.loading>i.icon:before {
+.ui.alert.loading > i.icon:before {
     color: var(--ctp-lavender) !important;
 }
 
-/* ── Plugin info message ───────────────────────────────────── */
+/* ── Plugin info message ──────────────────────────────────────────────────── */
 html.dark-mode .ui.alert .pluginmessage,
 html:not(.dark-mode) .ui.alert .pluginmessage {
     background-color: transparent !important;
