@@ -63,16 +63,16 @@ html:not(.dark-mode) .boxconfirmation * {
     color: var(--ctp-base) !important;
 }
 
-/* Information — Teal (style guide: Information → Teal) */
+/* Information — (style guide: Information) */
 html.dark-mode .alert.alert-info,
 html.dark-mode .boxinformation,
 html.dark-mode .alert.alert-info i.icon:before,
 html:not(.dark-mode) .alert.alert-info,
 html:not(.dark-mode) .boxinformation,
 html:not(.dark-mode) .alert.alert-info i.icon:before {
-    background-color: var(--ctp-teal) !important;
+    background-color: var(--ctp-blue) !important;
     color: var(--ctp-base) !important;
-    border: 1px solid var(--ctp-teal) !important;
+    border: 1px solid var(--ctp-blue) !important;
 }
 
 html.dark-mode .alert.alert-info *,
@@ -103,7 +103,7 @@ html:not(.dark-mode) #messagestack .alert-success {
 
 html.dark-mode #messagestack .alert-info,
 html:not(.dark-mode) #messagestack .alert-info {
-    background-color: var(--ctp-teal) !important;
+    background-color: var(--ctp-blue) !important;
     color: var(--ctp-base) !important;
 }
 

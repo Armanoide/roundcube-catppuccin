@@ -183,7 +183,7 @@ html:not(.dark-mode) .recipient-input,
 html:not(.dark-mode) .recipient-input input {
     background-color: var(--ctp-mantle) !important;
     color: var(--ctp-text) !important;
-    border: 1px solid var(--ctp-surface0) !important;
+    border: none !important;
 }
 
 /* Focus state for form inputs */
@@ -197,7 +197,7 @@ html:not(.dark-mode) .recipient-input.focus,
 html:not(.dark-mode) .recipient-input input:focus {
     border-color: var(--ctp-lavender) !important;
     outline: none !important;
-    box-shadow: 0 0 0 2px var(--ctp-primary-boxshadow) !important;
+    border: none !important;
 }
 
 /* Login/button primary fix */

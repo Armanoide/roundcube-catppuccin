@@ -38,7 +38,6 @@ html.dark-mode #composebodycontainer,
 html.dark-mode #composebody,
 html:not(.dark-mode) #composebodycontainer,
 html:not(.dark-mode) #composebody {
-    background-color: var(--ctp-base) !important;
     color: var(--ctp-text) !important;
 }
 
