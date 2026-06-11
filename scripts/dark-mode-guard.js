@@ -9,6 +9,10 @@
     var html = document.documentElement;
 
     function removeDarkMode() {
+        if (!html.classList.contains('dark-mode')) {
+            return;
+        }
+
         html.classList.remove('dark-mode');
 
         var btn = document.querySelector('#taskmenu a.theme');

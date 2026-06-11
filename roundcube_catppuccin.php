@@ -37,6 +37,7 @@ class roundcube_catppuccin extends rcube_plugin
 
         $this->include_stylesheet("src/{$this->active_flavor}/colors.css");
         $this->include_stylesheet("src/theme.css");
+        $this->include_script('scripts/picker-interaction.js');
 
         // Guard script — only for light flavors (prevents dark-mode leaks)
         if (!in_array($this->active_flavor, self::DARK_FLAVORS, true)) {
@@ -195,20 +196,6 @@ class roundcube_catppuccin extends rcube_plugin
 
         </div>
     </div>
-
-    <script>
-    function catppuccin_choose(el) {
-        var picker = document.getElementById('catppuccin-theme-picker');
-        picker.querySelectorAll('label').forEach(function(lbl) {
-            lbl.style.borderColor = '#45475a';
-            lbl.querySelector('span').style.fontWeight = '';
-        });
-        el.style.borderColor     = '#cba6f7';
-        el.querySelector('span').style.fontWeight = 'bold';
-        document.getElementById('rcmfd_catppuccin_flavor').value =
-            el.querySelector('input').value;
-    }
-    </script>
     <?php return ob_get_clean();
     }
 }
