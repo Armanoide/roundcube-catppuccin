@@ -37,14 +37,13 @@ class roundcube_catppuccin extends rcube_plugin
 
         $this->include_stylesheet("src/{$this->active_flavor}/colors.css");
         $this->include_stylesheet("src/theme.css");
-        $this->include_script('scripts/picker-interaction.js');
 
         // Guard script — only for light flavors (prevents dark-mode leaks)
         if (!in_array($this->active_flavor, self::DARK_FLAVORS, true)) {
             $this->include_script('scripts/dark-mode-guard.js');
         }
 
-        // Header hook runs on every request — inject mode-force script
+        // Header hook runs on every request — inject color-scheme meta tag
         $this->add_hook('header_write', [$this, 'header_write']);
 
         // Preference hooks — settings task only
@@ -94,20 +93,20 @@ class roundcube_catppuccin extends rcube_plugin
         }
     }
 
-    // ── Force correct colour scheme — meta tag + class guard     */
-    // 1. `<meta name="color-scheme">` tells the browser: don't
-    //    auto-darken this page (system Night Light, Chrome dark mode).
-    // 2. For light flavors, any code that runs after <head> that checks the
-    //    current class and adds `dark-mode` back (e.g. Roundcube's layout.html).
-    // 3. `DOMContentLoaded` + `load` handlers double-check in case
-    //    extension injected stylesheets attempt to re-add.</span>
+    // ── hooks ───────────────────────────────────────────────────── */
+
+    /**
+     * Inject <meta name="color-scheme"> into <head> so the browser
+     * doesn't auto-darken this page (system Night Light, Chrome auto-dark).
+     */
     public function header_write(array $args): array
     {
-        $use_dark = in_array($this->active_flavor, self::DARK_FLAVORS, true);
-        $scheme   = $use_dark ? 'dark' : 'light';
+        $scheme = in_array($this->active_flavor, self::DARK_FLAVORS, true)
+            ? 'dark'
+            : 'light';
 
         $args['content'] = '<meta name="color-scheme" content="' . $scheme . '">' . "\n"
-                         . $args['content'];
+                          . $args['content'];
         return $args;
     }
 
@@ -128,7 +127,7 @@ class roundcube_catppuccin extends rcube_plugin
             'title'   => 'Catppuccin Theme',
             'options' => [
                 'catppuccin_flavor' => [
-                    'title'   => '',
+                    'title'   => 'Catppuccin Theme',
                     'content' => $this->build_picker_html(),
                 ],
             ],
