@@ -38,6 +38,11 @@ class roundcube_catppuccin extends rcube_plugin
         $this->include_stylesheet("src/{$this->active_flavor}/colors.css");
         $this->include_stylesheet("src/theme.css");
 
+        // Guard script — only for light flavors (prevents dark-mode leaks)
+        if (!in_array($this->active_flavor, self::DARK_FLAVORS, true)) {
+            $this->include_script('scripts/dark-mode-guard.js');
+        }
+
         // Header hook runs on every request — inject mode-force script
         $this->add_hook('header_write', [$this, 'header_write']);
 
@@ -100,50 +105,8 @@ class roundcube_catppuccin extends rcube_plugin
         $use_dark = in_array($this->active_flavor, self::DARK_FLAVORS, true);
         $scheme   = $use_dark ? 'dark' : 'light';
 
-        // Meta tag: forces the browser's color scheme.
-        // Prevents automatic dark-mode from system Night Light or Chrome auto-dark.
-        $injection = '<meta name="color-scheme" content="' . $scheme . '">' . "\n";
-
-        // If using a light palette, strip any `dark-mode` class that any agent
-        // tries to add (Darkreader, browser SDK, etc) and sync the Roundcube
-        // toggle button so the button text and class reflect the actual state.
-        if (!$use_dark) {
-            $injection .= '<script>
-  (function(){
-    var h = document.documentElement;
-    var pillage = function(){
-      // Remove dark-mode from <html>
-      h.classList.remove(\'dark-mode\');
-      // Sync the Roundcube dark/light toggle button with the actual state
-      var btn = document.querySelector(\'#taskmenu a.theme\');
-      if (btn) {
-        btn.classList.remove(\'dark\');
-        btn.classList.add(\'light\');
-        var span = btn.querySelector(\'span\');
-        if (span) {
-          var txt = span.textContent || span.innerText || \'\';
-          span.textContent = txt.replace(/Dark|Light/gi, \'Light\');
-        }
-      }
-    };
-    pillage();
-    // Standard events
-    document.addEventListener(\'DOMContentLoaded\', pillage, false);
-    window.addEventListener(\'load\', pillage, false);
-    // Watch for class changes and remove dark-mode if it reappears
-    if (window.MutationObserver) {
-      var observer = new MutationObserver(function(mutations){
-        for (var i = 0; i < mutations.length; i++) {
-          if (mutations[i].attributeName === \'class\') { pillage(); break; }
-        }
-      });
-      observer.observe(h, { attributes: true, attributeOldValue: false });
-    }
-  })();
-</script>' . "\n";
-        }
-
-        $args['content'] = $injection . $args['content'];
+        $args['content'] = '<meta name="color-scheme" content="' . $scheme . '">' . "\n"
+                         . $args['content'];
         return $args;
     }
 
