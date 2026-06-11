@@ -19,10 +19,11 @@ class roundcube_catppuccin extends rcube_plugin
     public $task = '.*';
 
     private const FLAVORS = [
+        'none'      => 'None',
         'mocha'     => 'Mocha',
         'macchiato' => 'Macchiato',
         'latte'     => 'Latte',
-        'frappe'    => 'Frappe'
+        'frappe'    => 'Frappe',
     ];
 
     private const DARK_FLAVORS = ['mocha', 'macchiato', 'frappe'];
@@ -35,12 +36,14 @@ class roundcube_catppuccin extends rcube_plugin
     {
         $this->active_flavor = $this->get_active_flavor();
 
-        $this->include_stylesheet("src/{$this->active_flavor}/colors.css");
-        $this->include_stylesheet("src/theme.css");
+        if ($this->active_flavor !== 'none') {
+            $this->include_stylesheet("src/{$this->active_flavor}/colors.css");
+            $this->include_stylesheet("src/theme.css");
 
-        // Guard script — only for light flavors (prevents dark-mode leaks)
-        if (!in_array($this->active_flavor, self::DARK_FLAVORS, true)) {
-            $this->include_script('scripts/dark-mode-guard.js');
+            // Guard script — only for light flavors (prevents dark-mode leaks)
+            if (!in_array($this->active_flavor, self::DARK_FLAVORS, true)) {
+                $this->include_script('scripts/dark-mode-guard.js');
+            }
         }
 
         // Header hook runs on every request — inject color-scheme meta tag
