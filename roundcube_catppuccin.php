@@ -3,9 +3,13 @@
 /**
  * Catppuccin theme plugin for Roundcube
  *
- * Four-flavor theme overlay for the Elastic skin. User selects a flavor
+ * Four-flavour theme overlay for the Elastic skin. User selects a flavour
  * in Settings > General and the choice is persisted to the database
  * (primary) and synced to a cookie (login-page fallback).
+ *
+ * Flavour → mode mapping:
+ *   mocha / macchiato / frappe  → dark-mode
+ *   latte                       → light-mode (dark-mode removed)
  *
  * @license   MIT
  * @author    Armanoide
@@ -14,7 +18,6 @@ class roundcube_catppuccin extends rcube_plugin
 {
     public $task = '.*';
 
-    /** Supported flavors keyed by slug, values are display labels. */
     private const FLAVORS = [
         'mocha'     => 'Mocha',
         'macchiato' => 'Macchiato',
@@ -22,20 +25,23 @@ class roundcube_catppuccin extends rcube_plugin
         'frappe'    => 'Frapp\u00e9',
     ];
 
-    /** The resolved flavor for the current request. */
+    private const DARK_FLAVORS = ['mocha', 'macchiato', 'frappe'];
+
     private string $active_flavor;
 
-    // --------------------------------------------------------------- Init */
+    // ── init ─────────────────────────────────────────────────────── */
 
     public function init(): void
     {
         $this->active_flavor = $this->get_active_flavor();
 
-        // Include stylesheets on every page
         $this->include_stylesheet("src/{$this->active_flavor}/colors.css");
-        $this->include_stylesheet('src/theme.css');
+        $this->include_stylesheet("src/theme.css");
 
-        // Only register preference hooks when in settings task
+        // Header hook runs on every request — inject mode-force script
+        $this->add_hook('header_write', [$this, 'header_write']);
+
+        // Preference hooks — settings task only
         $rcmail = rcmail::get_instance();
         if ($rcmail->task === 'settings') {
             $this->add_hook('preferences_list', [$this, 'prefs_list']);
@@ -43,37 +49,105 @@ class roundcube_catppuccin extends rcube_plugin
         }
     }
 
-    // ----------------------------------------------------------- Flavour resolution cascade:
-    //  1. Roundcube config (DB-backed user-prefs merged in automatically
-    //  2. Cookie (pre-auth / login page)
-    //  3. Hard-coded default
+    // ── flavour resolution ───────────────────────────────────────── */
     private function get_active_flavor(): string
     {
         $rcmail = rcmail::get_instance();
 
-        // 1 — DB-backed config
         $val = $rcmail->config->get('catppuccin_flavor');
         if (!empty($val) && isset(self::FLAVORS[$val])) {
             return $val;
         }
 
-        // 2 — Cookie (pre-auth / login page)
         $cookie = rcube_utils::get_input_value('catppuccinFlavor', rcube_utils::INPUT_COOKIE);
         if (!empty($cookie) && isset(self::FLAVORS[$cookie])) {
             return $cookie;
         }
 
-        // 3 — Hard default
         return 'mocha';
     }
 
-    /** Sync the cookie to always match the DB-backed flavour. */
+    /** Sync cookie so login page picks up the same flavour. */
     private function sync_cookie(string $flavor): void
     {
-        rcube_utils::setcookie('catppuccinFlavor', $flavor, 0, false, false);
+        rcube_utils::setcookie('catppuccinFlavor', $flavor, 0, false);
+
+        // Sync Roundcube's built-in colorMode cookie so the
+        // built-in dark/light toggle button stays consistent.
+        //
+        // Roundcube's layout.html inline script checks:
+        //   if (cookie has 'colorMode=dark'
+        //       || (!cookie has 'colorMode=light' && system prefers dark) {
+        //       add dark-mode to <html>
+        // So for light flavors we MUST explicitly set 'colorMode=light' to
+        // prevent the system-preference fallback from adding 'dark-mode'.
+        if (in_array($flavor, self::DARK_FLAVORS, true)) {
+            rcube_utils::setcookie('colorMode', 'dark', 0, false);
+        } else {
+            rcube_utils::setcookie('colorMode', 'light', 0, false);
+        }
     }
 
-    // --------------------------------------------------------------- Preferences list
+    // ── Force correct colour scheme — meta tag + class guard     */
+    // 1. `<meta name="color-scheme">` tells the browser: don't
+    //    auto-darken this page (system Night Light, Chrome dark mode).
+    // 2. For light flavors, any code that runs after <head> that checks the
+    //    current class and adds `dark-mode` back (e.g. Roundcube's layout.html).
+    // 3. `DOMContentLoaded` + `load` handlers double-check in case
+    //    extension injected stylesheets attempt to re-add.</span>
+    public function header_write(array $args): array
+    {
+        $use_dark = in_array($this->active_flavor, self::DARK_FLAVORS, true);
+        $scheme   = $use_dark ? 'dark' : 'light';
+
+        // Meta tag: forces the browser's color scheme.
+        // Prevents automatic dark-mode from system Night Light or Chrome auto-dark.
+        $injection = '<meta name="color-scheme" content="' . $scheme . '">' . "\n";
+
+        // If using a light palette, strip any `dark-mode` class that any agent
+        // tries to add (Darkreader, browser SDK, etc) and sync the Roundcube
+        // toggle button so the button text and class reflect the actual state.
+        if (!$use_dark) {
+            $injection .= '<script>
+  (function(){
+    var h = document.documentElement;
+    var pillage = function(){
+      // Remove dark-mode from <html>
+      h.classList.remove(\'dark-mode\');
+      // Sync the Roundcube dark/light toggle button with the actual state
+      var btn = document.querySelector(\'#taskmenu a.theme\');
+      if (btn) {
+        btn.classList.remove(\'dark\');
+        btn.classList.add(\'light\');
+        var span = btn.querySelector(\'span\');
+        if (span) {
+          var txt = span.textContent || span.innerText || \'\';
+          span.textContent = txt.replace(/Dark|Light/gi, \'Light\');
+        }
+      }
+    };
+    pillage();
+    // Standard events
+    document.addEventListener(\'DOMContentLoaded\', pillage, false);
+    window.addEventListener(\'load\', pillage, false);
+    // Watch for class changes and remove dark-mode if it reappears
+    if (window.MutationObserver) {
+      var observer = new MutationObserver(function(mutations){
+        for (var i = 0; i < mutations.length; i++) {
+          if (mutations[i].attributeName === \'class\') { pillage(); break; }
+        }
+      });
+      observer.observe(h, { attributes: true, attributeOldValue: false });
+    }
+  })();
+</script>' . "\n";
+        }
+
+        $args['content'] = $injection . $args['content'];
+        return $args;
+    }
+
+    // ── preferences_list ──────────────────────────────────────────── */
 
     public function prefs_list(array $args): array
     {
@@ -81,7 +155,6 @@ class roundcube_catppuccin extends rcube_plugin
             return $args;
         }
 
-        // Respect admin-level override (lock the setting)
         $dont_override = (array) rcmail::get_instance()->config->get('dont_override', []);
         if (in_array('catppuccin_flavor', $dont_override, true)) {
             return $args;
@@ -100,7 +173,7 @@ class roundcube_catppuccin extends rcube_plugin
         return $args;
     }
 
-    // --------------------------------------------------------------- Preferences save
+    // ── preferences_save ──────────────────────────────────────────── */
 
     public function prefs_save(array $args): array
     {
@@ -118,12 +191,14 @@ class roundcube_catppuccin extends rcube_plugin
         if (!empty($flavor) && isset(self::FLAVORS[$flavor])) {
             $args['prefs']['catppuccin_flavor'] = $flavor;
             $this->sync_cookie($flavor);
+
+            rcmail::get_instance()->output->command('reload', 500);
         }
 
         return $args;
     }
 
-    // --------------------------------------------------------------- Helpers */
+    // ── helpers ───────────────────────────────────────────────────── */
 
     private function build_picker_html(): string
     {
