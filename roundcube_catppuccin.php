@@ -22,7 +22,7 @@ class roundcube_catppuccin extends rcube_plugin
         'mocha'     => 'Mocha',
         'macchiato' => 'Macchiato',
         'latte'     => 'Latte',
-        'frappe'    => 'Frapp\u00e9',
+        'frappe'    => 'Frappe'
     ];
 
     private const DARK_FLAVORS = ['mocha', 'macchiato', 'frappe'];
