@@ -3,26 +3,29 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Armanoide/roundcube_catppuccin/blob/main/LICENSE)
 [![Roundcube plugin](https://img.shields.io/badge/Roundcube-Plugin-blue.svg)](https://roundcube.net)
 
-Catppuccin theme overlay for Roundcube's Elastic skin. Transforms the default interface into a warm, soothing dark theme.
+Catppuccin theme overlay for Roundcube's Elastic skin. Transforms the default interface into a warm, soothing dark theme with four flavour options switchable from Settings.
 
 ![Dark mode preview](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png)
 
-## Currently Available Flavours
+## Flavours
 
-| 🌿 Mocha |
-|:---:|
-| Included |
+| ☕ Mocha | 🌙 Macchiato | 🪍 Frappé | 🤎 Latte |
+|:---:|:---:|:---:|:---:|
+| Dark | Dark | Dark | Light |
 
 ## Features
 
-- 🎨 **Catppuccin Mocha palette** — warm and subdued dark color scheme
+- 🎨 **Four Catppuccin palettes** — switch between Mocha, Macchiato, Frappé, and Latte
+- ⚙️ **Settings integration** — change flavour in Settings > General, saved to database
+- 🍪 **Cookie sync** — flavour remembered on login page before authentication
 - 🔧 **Zero-config** — plug and play with the Elastic skin
 - 📦 **Composer-ready** — works with `roundcube/plugin-installer`
 - 🐳 **Docker-friendly** — works with `roundcube/roundcubemail`
 
 ## Requirements
 
-- Roundcube 2.0+
+- Roundcube 1.6+
+- PHP 8.0+
 - **Elastic skin** (default in Roundcube)
 
 ## Installation
@@ -35,19 +38,44 @@ composer require armanoide/roundcube-catppuccin
 ```
 
 ### Manual Installation
-1. Clone this repository into your plugins/ directory
-2. Enable the plugin in config/config.inc.php
 
-### Configuration
-Enable the plugin and set your preferred flavor in your Roundcube config.inc.php:
+1. Clone this repository into your `plugins/` directory
+2. Enable the plugin in `config/config.inc.php`:
+
 ```php
-$config['plugins'] = ['roundcube_catppuccin'];
+$config['plugins'][] = 'roundcube_catppuccin';
+```
+
+## Configuration
+
+### Global default flavour (optional)
+
+Set the default flavour for all users in `config/config.inc.php`:
+
+```php
 $config['catppuccin_flavor'] = 'mocha';
 ```
 
+### Per-user selection
 
-If you're running Roundcube via the official roundcube/roundcubemail Docker image:
-`docker-compose.yml`
+Once the plugin is enabled, users can select their preferred flavour in:
+**Settings > General > Catppuccin Theme**
+
+The selection is saved to the user's preferences (database) and synced to a
+cookie for the login page.
+
+### Lock the setting (optional)
+
+Prevent users from changing their flavour by adding it to `dont_override`:
+
+```php
+$config['dont_override'][] = 'catppuccin_flavor';
+```
+
+## Docker
+
+With the official `roundcube/roundcubemail` image:
+
 ```yaml
 services:
   roundcubemail:
@@ -60,16 +88,5 @@ services:
       - ./www/plugins:/var/www/html/plugins
 ```
 
-Mount your plugins directory to persist the installed plugin across container restarts.
-Roundcube `config.inc.php`
-
-```php
-<?php
-$config['plugins'] = [
-    'archive',
-    'zipdownload',
-    'roundcube_catppuccin',
-];
-$config['catppuccin_flavor'] = 'mocha';
-```
-
+Mount the `plugins` volume to persist the installed plugin across container
+restarts.
