@@ -37,8 +37,8 @@ class roundcube_catppuccin extends rcube_plugin
         $this->active_flavor = $this->get_active_flavor();
 
         if ($this->active_flavor !== 'none') {
-            $this->include_stylesheet("src/{$this->active_flavor}/colors.css");
-            $this->include_stylesheet("src/theme.css");
+            $this->include_stylesheet("flavors/{$this->active_flavor}/colors.css");
+            $this->include_stylesheet("theme.css");
 
             // Guard script — only for light flavors (prevents dark-mode leaks)
             if (!in_array($this->active_flavor, self::DARK_FLAVORS, true)) {
