@@ -1,80 +1,77 @@
-# roundcube_catppuccin
+<h3 align="center">
+    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+    Catppuccin for <a href="https://roundcube.net">Roundcube</a>
+    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+</h3>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Armanoide/roundcube_catppuccin/blob/main/LICENSE)
-[![Roundcube plugin](https://img.shields.io/badge/Roundcube-Plugin-blue.svg)](https://roundcube.net)
+<p align="center">
+    <a href="https://github.com/Armanoide/roundcube_catppuccin/stargazers">
+        <img src="https://img.shields.io/github/stars/Armanoide/roundcube_catppuccin?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"/>
+    </a>
+    <a href="https://github.com/Armanoide/roundcube_catppuccin/issues">
+        <img src="https://img.shields.io/github/issues/Armanoide/roundcube_catppuccin?colorA=363a4f&colorB=f5a97f&style=for-the-badge"/>
+    </a>
+    <a href="https://github.com/Armanoide/roundcube_catppuccin/forks">
+        <img src="https://img.shields.io/github/forks/Armanoide/roundcube_catppuccin?colorA=363a4f&colorB=a6da95&style=for-the-badge"/>
+    </a>
+</p>
 
-Catppuccin theme overlay for Roundcube's Elastic skin. Transforms the default interface into a warm, soothing dark theme with four flavour options switchable from Settings.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png"/>
+</p>
 
-![Dark mode preview](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png)
+<p align="center">
+    <sup>Soothing pastel Catppuccin flavours for Roundcube's Elastic skin <3</sup>
+    <br/>
+    <sub>⭐️ <a href="https://github.com/Armanoide/roundcube_catppuccin">GitHub</a>
+    · 📖 <a href="https://roundcube.net">Roundcube</a></sub>
+</p>
 
-## Flavours
+## Previews
 
-| ☕ Mocha | 🌙 Macchiato | 🪍 Frappé | 🤎 Latte |
-|:---:|:---:|:---:|:---:|
-| Dark | Dark | Dark | Light |
+<details>
+<summary>🌻 Latte</summary>
+<img src="assets/previews/latte.png"/>
+</details>
+<details>
+<summary>🪴 Frappé</summary>
+<img src="assets/previews/frappe.png"/>
+</details>
+<details>
+<summary>🌺 Macchiato</summary>
+<img src="assets/previews/macchiato.png"/>
+</details>
+<details>
+<summary>🌿 Mocha</summary>
+<img src="assets/previews/mocha.png"/>
+</details>
 
-## Features
+&nbsp;
 
-- 🎨 **Four Catppuccin palettes** — switch between Mocha, Macchiato, Frappé, and Latte
-- ⚙️ **Settings integration** — change flavour in Settings > General, saved to database
-- 🍪 **Cookie sync** — flavour remembered on login page before authentication
-- 🔧 **Zero-config** — plug and play with the Elastic skin
-- 📦 **Composer-ready** — works with `roundcube/plugin-installer`
-- 🐳 **Docker-friendly** — works with `roundcube/roundcubemail`
+## 🧠 Installation
 
-## Requirements
-
-- Roundcube 1.6+
-- PHP 8.0+
-- **Elastic skin** (default in Roundcube)
-
-## Installation
-
-### Via Composer
+### Composer (recommended)
 
 ```bash
 cd /path/to/roundcube
 composer require armanoide/roundcube-catppuccin
 ```
 
-### Manual Installation
+### Manual
 
-1. Clone this repository into your `plugins/` directory
-2. Enable the plugin in `config/config.inc.php`:
+```bash
+git clone https://github.com/Armanoide/roundcube_catppuccin.git \
+    /path/to/roundcube/plugins/roundcube_catppuccin
+```
+
+Then enable it in `config/config.inc.php`:
 
 ```php
 $config['plugins'][] = 'roundcube_catppuccin';
 ```
 
-## Configuration
-
-### Global default flavour (optional)
-
-Set the default flavour for all users in `config/config.inc.php`:
-
-```php
-$config['catppuccin_flavor'] = 'mocha';
-```
-
-### Per-user selection
-
-Once the plugin is enabled, users can select their preferred flavour in:
-**Settings > General > Catppuccin Theme**
-
-The selection is saved to the user's preferences (database) and synced to a
-cookie for the login page.
-
-### Lock the setting (optional)
-
-Prevent users from changing their flavour by adding it to `dont_override`:
-
-```php
-$config['dont_override'][] = 'catppuccin_flavor';
-```
-
-## Docker
-
-With the official `roundcube/roundcubemail` image:
+### Docker
 
 ```yaml
 services:
@@ -88,5 +85,64 @@ services:
       - ./www/plugins:/var/www/html/plugins
 ```
 
-Mount the `plugins` volume to persist the installed plugin across container
-restarts.
+&nbsp;
+
+## 🍱 Usage
+
+Once installed and enabled, users can pick their flavour directly from the UI:
+
+**Settings &gt; General &gt; Catppuccin Theme**
+
+The selection is persisted to the database and synced to a cookie so the
+login page reflects it before authentication.
+
+<img src="assets/previews/preference_user.png"/>
+
+## ⚙️ Configuration
+
+### Global default flavour (optional)
+
+Set a default flavour for all users in `config/config.inc.php`:
+
+```php
+$config['catppuccin_flavor'] = 'mocha';
+```
+
+### Lock the setting (optional)
+
+Prevent users from changing their flavour:
+
+```php
+$config['dont_override'][] = 'catppuccin_flavor';
+```
+
+### Watermark page (optional)
+
+Display a themed blank page (e.g. for login portal or branding):
+
+```php
+$config['blankpage_url'] = 'https://your-webmail-host/static.php/plugins/roundcube_catppuccin/watermark.html';
+```
+
+The watermark respects the user's selected flavour via cookie, so the
+background colour matches automatically.
+
+&nbsp;
+
+## 📋 Requirements
+
+- **Roundcube** 1.6+
+- **PHP** 8.0+
+- **Elastic skin** (default in Roundcube)
+
+&nbsp;
+
+## 💝 Thanks To
+
+- **[Catppuccin Org](https://github.com/catppuccin)** — for the beautiful palettes
+
+&nbsp;
+
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+<p align="center">Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
+<p align="center"><a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>
